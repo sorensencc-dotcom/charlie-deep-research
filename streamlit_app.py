@@ -25,7 +25,8 @@ if 'daily_log' not in st.session_state:
 def refine_query_with_memory(user_query, persona, logs):
     modifiers = {
         "The Genealogist": "genealogy census 'city directory' owner biography family",
-        "The Metallurgist": "patent metallurgy 'iron composition' ghost mark technical alloy"
+        "The Metallurgist": "patent metallurgy 'iron composition' ghost mark technical alloy",
+        "The Industrial Architect": "assembly line 'moving chassis' 'Highland Park' 'Willow Run' foundry workflow mass production"
     }
     base = f"{user_query} {modifiers.get(persona, '')}"
     if not logs:
@@ -39,7 +40,7 @@ def extract_intel(text):
     return list(set(names))[:5], list(set(locs))[:5]
 
 st.title("⚒️ Cast Iron Deep Research Labs")
-st.caption("Agentic Intelligence Engine for Cast Iron Charlie")
+st.caption("Strategic Intelligence for the Sorensen 'Straight Line' Project")
 
 # --- Sidebar ---
 with st.sidebar:
@@ -47,15 +48,11 @@ with st.sidebar:
     api_key = st.secrets.get("SERPAPI_KEY") or st.text_input("SerpApi Key", type="password")
     
     st.divider()
-    persona = st.selectbox("Active Persona", ["The Genealogist", "The Metallurgist"])
+    persona = st.selectbox("Active Persona", ["The Industrial Architect", "The Metallurgist", "The Genealogist"])
     intensity = st.radio("Search Intensity", ["Surface Scan", "Deep Dive"])
     
-    st.divider()
-    st.subheader("📸 Visual Archaeologist")
-    uploaded_file = st.file_uploader("Upload logo photo", type=['jpg', 'png', 'jpeg'])
-    if uploaded_file:
-        st.image(uploaded_file, caption="Analyzing markings...", use_container_width=True)
-        st.info("Vision analysis active.")
+    if persona == "The Industrial Architect":
+        st.info("Focus: Sorensen’s assembly line techniques, factory flow, and mass production logistics.")
 
     st.divider()
     st.subheader("📋 Forge Log")
@@ -69,13 +66,13 @@ with st.sidebar:
         st.download_button("📥 Export Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
 
 # --- Main Research Logic ---
-query = st.text_input("Research Topic", placeholder="e.g., Griswold Sidney hollowware 1880")
+query = st.text_input("Research Topic", placeholder="e.g., Ford Piquette Avenue assembly line experiments 1910")
 
 if st.button("Engage Engines (Agentic Mode)"):
     if not api_key:
         st.error("Please add your SerpApi Key.")
     else:
-        with st.spinner(f"🧠 {persona} is forging intelligence..."):
+        with st.spinner(f"🧠 {persona} is reconstructing the line..."):
             smart_query = refine_query_with_memory(query, persona, st.session_state['daily_log'])
             params = {"q": smart_query, "api_key": api_key}
             try:
@@ -100,7 +97,6 @@ if st.button("Engage Engines (Agentic Mode)"):
                     for y in set(years):
                         timeline_data.append({"Year": int(y), "Source": res['title'][:30]})
                     
-                    # Store Link and Title separately for the Clickable column
                     final_results.append({"Source Title": res['title'], "Link": res['link']})
                 
                 st.session_state['results_df'] = pd.DataFrame(final_results)
@@ -115,31 +111,24 @@ if 'results_df' in st.session_state:
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader(f"📊 Findings from {persona}")
-        # NEW: Clickable Link Formatting
+        st.subheader(f"📊 Findings: {persona}")
         st.data_editor(
             st.session_state['results_df'],
             column_config={
-                "Link": st.column_config.LinkColumn(
-                    "Source Link",
-                    help="Click to open original record",
-                    validate="^https://.*",
-                    display_text="Open Original Record"
-                )
+                "Link": st.column_config.LinkColumn("Source Link", display_text="Open Record")
             },
-            hide_index=True,
-            use_container_width=True
+            hide_index=True, use_container_width=True
         )
         
         if not st.session_state['timeline_df'].empty:
-            st.subheader("📅 Historical Project Timeline")
+            st.subheader("📅 Industrial Evolution Timeline")
             fig = px.scatter(st.session_state['timeline_df'], x="Year", y="Source", color="Year", template="plotly_dark")
             st.plotly_chart(fig, use_container_width=True)
             
     with col2:
         st.subheader("🕵️ Strategic Intel")
         if 'intel' in st.session_state:
-            with st.expander("Identified People", expanded=True):
+            with st.expander("Key Figures (People)", expanded=True):
                 for p in st.session_state['intel']['People']: st.write(f"👤 {p}")
-            with st.expander("Identified Places", expanded=True):
+            with st.expander("Strategic Hubs (Places)", expanded=True):
                 for l in st.session_state['intel']['Places']: st.write(f"📍 {l}")
