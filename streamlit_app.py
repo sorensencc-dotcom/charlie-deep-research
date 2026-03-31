@@ -99,4 +99,36 @@ if st.button("Engage Engines (Agentic Mode)"):
                     st.session_state['daily_log'].append({"Title": res['title'], "Content": content})
                     
                     # Timeline extraction
-                    years = re.
+                    years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content)
+                    for y in set(years):
+                        timeline_data.append({"Year": int(y), "Source": res['title'][:30]})
+                    
+                    final_results.append({"Title": res['title'], "Link": res['link']})
+                
+                st.session_state['results_df'] = pd.DataFrame(final_results)
+                st.session_state['timeline_df'] = pd.DataFrame(timeline_data)
+                st.session_state['intel'] = {"People": list(set(all_people)), "Places": list(set(all_places))}
+                st.toast("Strategic Search Success!")
+            except Exception as e:
+                st.error(f"Forge Error: {e}")
+
+# --- Display Findings ---
+if 'results_df' in st.session_state:
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.subheader(f"📊 Findings from {persona}")
+        st.dataframe(st.session_state['results_df'], use_container_width=True)
+        
+        if not st.session_state['timeline_df'].empty:
+            st.subheader("📅 Historical Project Timeline")
+            fig = px.scatter(st.session_state['timeline_df'], x="Year", y="Source", color="Year", template="plotly_dark")
+            st.plotly_chart(fig, use_container_width=True)
+            
+    with col2:
+        st.subheader("🕵️ Strategic Intel")
+        if 'intel' in st.session_state:
+            with st.expander("Identified People", expanded=True):
+                for p in st.session_state['intel']['People']: st.write(f"👤 {p}")
+            with st.expander("Identified Places", expanded=True):
+                for l in st.session_state['intel']['Places']: st.write(f"📍 {l}")
