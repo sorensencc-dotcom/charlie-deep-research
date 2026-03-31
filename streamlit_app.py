@@ -20,79 +20,81 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# Initialize Session State for Daily Batching
+if 'daily_log' not in st.session_state:
+    st.session_state['daily_log'] = []
+
 st.title("⚒️ Deep Research Lab")
 st.caption("Strategic Intelligence Engine for Cast Iron Charlie")
 
 # --- Sidebar & Credit Tracker ---
 with st.sidebar:
     st.header("Forge Settings")
-    # This pulls your key from the Secrets you added earlier
     api_key = st.secrets.get("SERPAPI_KEY") or st.text_input("SerpApi Key", type="password")
-    
     intensity = st.radio("Search Intensity", ["Surface Scan", "Deep Dive"])
+    
     st.divider()
 
+    # --- Daily Batcher (The Forge Log) ---
+    st.subheader("📋 Today's Forge Log")
+    log_count = len(st.session_state['daily_log'])
+    st.write(f"Items collected: **{log_count}**")
+    
+    if log_count > 0:
+        # Create the text file for Claude
+        log_text = f"DAILY RESEARCH LOG: {datetime.now().strftime('%Y-%m-%d')}\n"
+        log_text += "INSTRUCTIONS: Analyze the following cast iron research data for patterns and technical insights.\n"
+        log_text += "="*30 + "\n\n"
+        for entry in st.session_state['daily_log']:
+            log_text += f"SOURCE: {entry['Title']}\nURL: {entry['Link']}\nDATA: {entry['Content']}\n"
+            log_text += "-"*20 + "\n"
+        
+        st.download_button("📥 Export Daily Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
+        if st.button("Clear Log"):
+            st.session_state['daily_log'] = []
+            st.rerun()
+
+    st.divider()
     if api_key:
         try:
             account_resp = requests.get(f"https://serpapi.com/account?api_key={api_key}").json()
-            total_limit = account_resp.get("searches_per_month", 250)
-            searches_left = account_resp.get("plan_searches_left", 0)
-            st.subheader("⚒️ Forge Capacity")
-            st.metric("Searches Left", f"{searches_left} / {total_limit}")
-            st.progress((total_limit - searches_left) / total_limit)
+            st.metric("Searches Left", f"{account_resp.get('plan_searches_left', 0)} / 250")
         except:
             st.caption("Unable to fetch credit balance.")
-    
-    st.divider()
-    st.info("💡 2026 Quota Protection: Deep scans are automatically trimmed to ~500 tokens.")
 
 # --- Research Logic ---
-query = st.text_input("Research Topic", placeholder="e.g., Antique foundry patterns")
+query = st.text_input("Research Topic", placeholder="e.g., Griswold vs Wagner metallurgy")
 
 if st.button("Engage Engines"):
     if not api_key:
-        st.error("Please add your SerpApi Key in Settings > Secrets.")
+        st.error("Please add your SerpApi Key.")
     else:
-        with st.spinner("⚒️ Forging results..."):
-            try:
-                params = {"q": query, "api_key": api_key}
-                search_data = requests.get("https://serpapi.com/search.json", params=params).json()
-                results = search_data.get("organic_results", [])
+        with st.spinner("⚒️ Forging..."):
+            params = {"q": query, "api_key": api_key}
+            search_data = requests.get("https://serpapi.com/search.json", params=params).json()
+            results = search_data.get("organic_results", [])
+            
+            final_results = []
+            timeline_data = []
+
+            for res in results[:5]:
+                snippet = res.get('snippet', '')
+                content_to_save = snippet
                 
-                final_results = []
-                timeline_data = []
+                if intensity == "Deep Dive":
+                    full_text = requests.get(f"https://r.jina.ai/{res['link']}").text
+                    content_to_save = full_text[:1800] # Safe token limit for 2026
 
-                for res in results[:5]:
-                    item = {"Title": res['title'], "Link": res['link'], "Snippet": res.get('snippet', '')}
-                    
-                    # Extract years for the timeline
-                    years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', item['Snippet'])
-                    
-                    if intensity == "Deep Dive":
-                        content = requests.get(f"https://r.jina.ai/{res['link']}").text
-                        item["Deep Intel"] = content[:1800] + "... [TRIMMED]"
-                        years += re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content[:5000])
-                    
-                    for year in set(years):
-                        timeline_data.append({"Year": int(year), "Source": item['Title'][:30]})
-                    
-                    final_results.append(item)
+                # Add to the Daily Log
+                st.session_state['daily_log'].append({
+                    "Title": res['title'],
+                    "Link": res['link'],
+                    "Content": content_to_save
+                })
+
+                # Process Timeline
+                years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content_to_save)
+                for year in set(years):
+                    timeline_data.append({"Year": int(year), "Source": res['title'][:30]})
                 
-                st.session_state['results'] = pd.DataFrame(final_results)
-                st.session_state['timeline'] = pd.DataFrame(timeline_data)
-                
-            except Exception as e:
-                st.error(f"Search Error: {e}")
-
-# --- Display ---
-if 'results' in st.session_state:
-    st.subheader("📊 Key Sources Found")
-    st.dataframe(st.session_state['results'], use_container_width=True)
-
-    if not st.session_state['timeline'].empty:
-        st.subheader("📅 Historical Project Timeline")
-        fig = px.scatter(st.session_state['timeline'], x="Year", y="Source", color="Year", template="plotly_dark")
-        st.plotly_chart(fig, use_container_width=True)
-
-    csv = st.session_state['results'].to_csv(index=False).encode('utf-8')
-    st.download_button("📥 Download CSV", data=csv, file_name="research.csv")
+                final_results.append({"Title": res['title'], "Link":
