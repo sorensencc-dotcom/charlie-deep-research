@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import requests
-import io
 import re
 import plotly.express as px
 from datetime import datetime
@@ -12,10 +11,9 @@ st.set_page_config(page_title="Deep Research Lab", page_icon="⚒️", layout="w
 st.markdown("""
     <style>
     .main { background-color: #1a1a1a; color: #f4f4f4; }
-    .stButton>button { background-color: #e67e22; color: white; border-radius: 4px; font-weight: bold; border: none; width: 100%; }
+    .stButton>button { background-color: #e67e22; color: white; border-radius: 4px; font-weight: bold; border: none; }
     .stButton>button:hover { background-color: #d35400; }
     h1 { color: #e67e22; text-transform: uppercase; letter-spacing: 2px; }
-    div[data-testid="stExpander"] { background: #2d2d2d; border: 1px solid #444; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -38,19 +36,15 @@ with st.sidebar:
     
     if log_count > 0:
         log_text = f"DAILY RESEARCH LOG: {datetime.now().strftime('%Y-%m-%d')}\n"
-        log_text += "INSTRUCTIONS: Analyze these cast iron sources for patterns.\n" + "="*30 + "\n\n"
+        log_text += "INSTRUCTIONS: Analyze these sources for patterns.\n" + "="*30 + "\n\n"
         for entry in st.session_state['daily_log']:
             log_text += f"SOURCE: {entry['Title']}\nURL: {entry['Link']}\nDATA: {entry['Content']}\n" + "-"*20 + "\n"
-        
         st.download_button("📥 Export Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
-        if st.button("Clear Log"):
-            st.session_state['daily_log'] = []
-            st.rerun()
 
     if api_key:
         try:
-            account_resp = requests.get(f"https://serpapi.com/account?api_key={api_key}").json()
-            st.metric("Searches Left", f"{account_resp.get('plan_searches_left', 0)} / 250")
+            acc = requests.get(f"https://serpapi.com/account?api_key={api_key}").json()
+            st.metric("Searches Left", f"{acc.get('plan_searches_left', 0)} / 250")
         except:
             st.caption("Searching enabled.")
 
