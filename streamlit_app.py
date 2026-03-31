@@ -34,7 +34,6 @@ def refine_query_with_memory(user_query, persona, logs):
     return f"{base} -intitle:\"{'\" -intitle:\"'.join(context)}\""
 
 def extract_intel(text):
-    # Regex to find People (Capitalized Names) and Places (City, ST)
     names = re.findall(r'\b([A-Z][a-z]+ [A-Z][a-z]+)\b', text)
     locs = re.findall(r'\b([A-Z][a-z]+, [A-Z]{2})\b', text)
     return list(set(names))[:5], list(set(locs))[:5]
@@ -56,7 +55,7 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Upload logo photo", type=['jpg', 'png', 'jpeg'])
     if uploaded_file:
         st.image(uploaded_file, caption="Analyzing markings...", use_container_width=True)
-        st.info("Vision analysis active: Markings included in query.")
+        st.info("Vision analysis active.")
 
     st.divider()
     st.subheader("📋 Forge Log")
@@ -92,18 +91,17 @@ if st.button("Engage Engines (Agentic Mode)"):
                     if intensity == "Deep Dive":
                         content = requests.get(f"https://r.jina.ai/{res['link']}").text[:1500] 
 
-                    # Extract Intel
                     ppl, plc = extract_intel(content)
                     all_people.extend(ppl); all_places.extend(plc)
                     
                     st.session_state['daily_log'].append({"Title": res['title'], "Content": content})
                     
-                    # Timeline extraction
                     years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content)
                     for y in set(years):
                         timeline_data.append({"Year": int(y), "Source": res['title'][:30]})
                     
-                    final_results.append({"Title": res['title'], "Link": res['link']})
+                    # Store Link and Title separately for the Clickable column
+                    final_results.append({"Source Title": res['title'], "Link": res['link']})
                 
                 st.session_state['results_df'] = pd.DataFrame(final_results)
                 st.session_state['timeline_df'] = pd.DataFrame(timeline_data)
@@ -118,7 +116,20 @@ if 'results_df' in st.session_state:
     
     with col1:
         st.subheader(f"📊 Findings from {persona}")
-        st.dataframe(st.session_state['results_df'], use_container_width=True)
+        # NEW: Clickable Link Formatting
+        st.data_editor(
+            st.session_state['results_df'],
+            column_config={
+                "Link": st.column_config.LinkColumn(
+                    "Source Link",
+                    help="Click to open original record",
+                    validate="^https://.*",
+                    display_text="Open Original Record"
+                )
+            },
+            hide_index=True,
+            use_container_width=True
+        )
         
         if not st.session_state['timeline_df'].empty:
             st.subheader("📅 Historical Project Timeline")
