@@ -52,7 +52,7 @@ with st.sidebar:
         st.download_button("📥 Export Daily Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
         if st.button("Clear Log"):
             st.session_state['daily_log'] = []
-            st.rerun()
+            st.write("Log cleared!")
 
     st.divider()
     if api_key:
