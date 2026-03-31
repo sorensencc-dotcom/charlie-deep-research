@@ -30,6 +30,7 @@ st.caption("Strategic Intelligence Engine for Cast Iron Charlie")
 # --- Sidebar & Credit Tracker ---
 with st.sidebar:
     st.header("Forge Settings")
+    # Pulls from Streamlit Secrets or manual input
     api_key = st.secrets.get("SERPAPI_KEY") or st.text_input("SerpApi Key", type="password")
     intensity = st.radio("Search Intensity", ["Surface Scan", "Deep Dive"])
     
@@ -43,7 +44,7 @@ with st.sidebar:
     if log_count > 0:
         # Create the text file for Claude
         log_text = f"DAILY RESEARCH LOG: {datetime.now().strftime('%Y-%m-%d')}\n"
-        log_text += "INSTRUCTIONS: Analyze the following cast iron research data for patterns and technical insights.\n"
+        log_text += "INSTRUCTIONS: Analyze the following cast iron research data for patterns.\n"
         log_text += "="*30 + "\n\n"
         for entry in st.session_state['daily_log']:
             log_text += f"SOURCE: {entry['Title']}\nURL: {entry['Link']}\nDATA: {entry['Content']}\n"
@@ -52,49 +53,17 @@ with st.sidebar:
         st.download_button("📥 Export Daily Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
         if st.button("Clear Log"):
             st.session_state['daily_log'] = []
-            st.write("Log cleared!")
+            st.rerun()
 
     st.divider()
     if api_key:
         try:
+            # Check SerpApi balance
             account_resp = requests.get(f"https://serpapi.com/account?api_key={api_key}").json()
-            st.metric("Searches Left", f"{account_resp.get('plan_searches_left', 0)} / 250")
+            searches_left = account_resp.get('plan_searches_left', 0)
+            st.metric("Searches Left", f"{searches_left} / 250")
         except:
             st.caption("Unable to fetch credit balance.")
 
 # --- Research Logic ---
-query = st.text_input("Research Topic", placeholder="e.g., Griswold vs Wagner metallurgy")
-
-if st.button("Engage Engines"):
-    if not api_key:
-        st.error("Please add your SerpApi Key.")
-    else:
-        with st.spinner("⚒️ Forging..."):
-            params = {"q": query, "api_key": api_key}
-            search_data = requests.get("https://serpapi.com/search.json", params=params).json()
-            results = search_data.get("organic_results", [])
-            
-            final_results = []
-            timeline_data = []
-
-            for res in results[:5]:
-                snippet = res.get('snippet', '')
-                content_to_save = snippet
-                
-                if intensity == "Deep Dive":
-                    full_text = requests.get(f"https://r.jina.ai/{res['link']}").text
-                    content_to_save = full_text[:1800] # Safe token limit for 2026
-
-                # Add to the Daily Log
-                st.session_state['daily_log'].append({
-                    "Title": res['title'],
-                    "Link": res['link'],
-                    "Content": content_to_save
-                })
-
-                # Process Timeline
-                years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content_to_save)
-                for year in set(years):
-                    timeline_data.append({"Year": int(year), "Source": res['title'][:30]})
-                
-                final_results.append({"Title": res['title'], "Link":
+query = st.text_input("Research
