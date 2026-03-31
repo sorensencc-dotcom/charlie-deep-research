@@ -2,98 +2,94 @@ import streamlit as st
 import pandas as pd
 import requests
 import re
-import plotly.express as px
+import os
 from datetime import datetime
 
 # --- Cast Iron Charlie Branding ---
 st.set_page_config(page_title="Deep Research Lab", page_icon="⚒️", layout="wide")
 
-st.markdown("""
-    <style>
-    .main { background-color: #1a1a1a; color: #f4f4f4; }
-    .stButton>button { background-color: #e67e22; color: white; border-radius: 4px; font-weight: bold; border: none; width: 100%; }
-    .stButton>button:hover { background-color: #d35400; }
-    h1 { color: #e67e22; text-transform: uppercase; letter-spacing: 2px; }
-    div[data-testid="stExpander"] { background: #2d2d2d; border: 1px solid #444; border-radius: 8px; }
-    </style>
-    """, unsafe_allow_html=True)
+# --- Persistence Layer ---
+# This checks if a master database already exists on your GitHub/Streamlit drive
+DB_FILE = "research_inventory.csv"
 
-# --- Logic Engines ---
 if 'daily_log' not in st.session_state:
     st.session_state['daily_log'] = []
 
-def refine_query_with_memory(user_query, persona, logs):
-    # Industrial Exclusions to block math/vocab noise
-    exclusions = "-PDF -math -midpoint -question -vocab -dictionary"
-    
-    modifiers = {
-        "The Genealogist": f"genealogy census 'city directory' owner biography {exclusions}",
-        "The Metallurgist": f"patent metallurgy 'iron composition' ghost mark technical alloy {exclusions}",
-        "The Industrial Architect": f"assembly line 'moving chassis' 'Highland Park' 'Willow Run' foundry workflow {exclusions}"
-    }
-    
-    base = f"{user_query} {modifiers.get(persona, '')}"
-    if not logs:
-        return base
-    
-    # Context-aware filtering of recent results
-    context = [item['Title'][:25] for item in logs[-3:]]
-    return f"{base} -intitle:\"{'\" -intitle:\"'.join(context)}\""
+# Load existing database if it exists
+if os.path.exists(DB_FILE):
+    st.session_state['master_db'] = pd.read_csv(DB_FILE).to_dict('records')
+else:
+    st.session_state['master_db'] = []
 
-def extract_intel(text):
-    # Enhanced entity extraction with noise filtering
-    noise_words = ["Midpoint", "Equation", "Dictionary", "Midpoint", "Question"]
+def save_to_permanent_db(query, results, persona):
+    for res in results:
+        entry = {
+            "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "Persona": persona,
+            "Query": query,
+            "Source": res.get('title'),
+            "URL": res.get('link')
+        }
+        st.session_state['master_db'].append(entry)
     
-    names = re.findall(r'\b([A-Z][a-z]+ [A-Z][a-z]+)\b', text)
-    locs = re.findall(r'\b([A-Z][a-z]+, [A-Z]{2})\b', text)
-    
-    filtered_names = [n for n in names if not any(w in n for w in noise_words)]
-    filtered_locs = [l for l in locs if not any(w in l for w in noise_words)]
-    
-    return list(set(filtered_names))[:5], list(set(filtered_locs))[:5]
+    # Write to physical storage
+    pd.DataFrame(st.session_state['master_db']).to_csv(DB_FILE, index=False)
 
+# --- Logic & UI ---
 st.title("⚒️ Cast Iron Deep Research Labs")
-st.caption("Strategic Intelligence for the Sorensen 'Straight Line' Project")
+st.caption("Permanent Intelligence for the Sorensen 'Straight Line' Project")
 
-# --- Sidebar ---
 with st.sidebar:
     st.header("Forge Settings")
     api_key = st.secrets.get("SERPAPI_KEY") or st.text_input("SerpApi Key", type="password")
-    
-    st.divider()
     persona = st.selectbox("Active Persona", ["The Industrial Architect", "The Metallurgist", "The Genealogist"])
-    intensity = st.radio("Search Intensity", ["Surface Scan", "Deep Dive"])
     
-    if persona == "The Industrial Architect":
-        st.info("Industrial Guardrails: Active (-PDF, -math filters applied)")
-
     st.divider()
-    st.subheader("📋 Forge Log")
-    log_count = len(st.session_state['daily_log'])
-    st.metric("Items Collected", log_count)
+    st.subheader("📦 Inventory Status")
+    st.metric("Total Records Saved", len(st.session_state['master_db']))
     
-    if log_count > 0:
-        log_text = f"DAILY RESEARCH LOG: {datetime.now().strftime('%Y-%m-%d')}\n" + "="*30 + "\n\n"
-        for entry in st.session_state['daily_log']:
-            log_text += f"SOURCE: {entry['Title']}\nDATA: {entry['Content']}\n" + "-"*20 + "\n"
-        st.download_button("📥 Export Log for Claude", data=log_text, file_name=f"charlie_log_{datetime.now().strftime('%Y%m%d')}.txt")
+    if st.button("🗑️ Clear Local Session"):
+        st.session_state['daily_log'] = []
+        st.rerun()
 
 # --- Main Research Logic ---
-query = st.text_input("Research Topic", placeholder="e.g., Ford foundry floor plan 1914")
+query = st.text_input("Research Topic", placeholder="e.g., Sorensen conveyor belt patents 1913")
 
-if st.button("Engage Engines (Agentic Mode)"):
+if st.button("Engage Engines"):
     if not api_key:
         st.error("Please add your SerpApi Key.")
     else:
-        with st.spinner(f"🧠 {persona} is filtering for gold..."):
-            smart_query = refine_query_with_memory(query, persona, st.session_state['daily_log'])
-            params = {"q": smart_query, "api_key": api_key}
+        with st.spinner("📥 Forging permanent records..."):
+            # Refine query with exclusions to avoid math/PDF noise
+            clean_query = f"{query} -PDF -math -midpoint -question"
+            params = {"q": clean_query, "api_key": api_key}
+            
             try:
                 search_data = requests.get("https://serpapi.com/search.json", params=params).json()
                 results = search_data.get("organic_results", [])
                 
-                final_results = []
-                timeline_data = []
-                all_people, all_places = [], []
+                # Save to the Permanent Database immediately
+                save_to_permanent_db(clean_query, results[:5], persona)
+                
+                st.success(f"Added {len(results[:5])} items to the permanent inventory.")
+                st.rerun()
+            except Exception as e:
+                st.error(f"Forge Error: {e}")
 
-                for res in results
+# --- Display Master Inventory ---
+if st.session_state['master_db']:
+    st.subheader("🗃️ Master Research Inventory (Persistent)")
+    df = pd.DataFrame(st.session_state['master_db'])
+    
+    st.data_editor(
+        df.sort_values(by="Timestamp", ascending=False),
+        column_config={
+            "URL": st.column_config.LinkColumn("Source Link", display_text="Open Record")
+        },
+        hide_index=True,
+        use_container_width=True
+    )
+    
+    # Provide a single download for the entire historical database
+    csv = df.to_csv(index=False).encode('utf-8')
+    st.download_button("📥 Download Master Database for Claude", data=csv, file_name="sorensen_master_intel.csv")
