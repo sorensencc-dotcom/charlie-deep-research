@@ -20,25 +20,18 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- App Header ---
 st.title("⚒️ Deep Research Lab")
 st.caption("Strategic Intelligence Engine for Cast Iron Charlie")
 
 # --- Sidebar & Credit Tracker ---
 with st.sidebar:
     st.header("Forge Settings")
-    # API Key Handling (Checks Secrets first, then User Input)
+    # This pulls your key from the Secrets you added earlier
     api_key = st.secrets.get("SERPAPI_KEY") or st.text_input("SerpApi Key", type="password")
     
-    intensity = st.radio(
-        "Search Intensity",
-        ["Surface Scan", "Deep Dive"],
-        help="Surface: Snippets only. Deep Dive: Full page analysis (Token heavy)."
-    )
-    
+    intensity = st.radio("Search Intensity", ["Surface Scan", "Deep Dive"])
     st.divider()
 
-    # --- Credit Tracker ---
     if api_key:
         try:
             account_resp = requests.get(f"https://serpapi.com/account?api_key={api_key}").json()
@@ -54,15 +47,14 @@ with st.sidebar:
     st.info("💡 2026 Quota Protection: Deep scans are automatically trimmed to ~500 tokens.")
 
 # --- Research Logic ---
-query = st.text_input("Research Topic", placeholder="e.g., Antique foundry patterns 1850-1920")
+query = st.text_input("Research Topic", placeholder="e.g., Antique foundry patterns")
 
 if st.button("Engage Engines"):
     if not api_key:
-        st.error("Please add your SerpApi Key to continue.")
+        st.error("Please add your SerpApi Key in Settings > Secrets.")
     else:
         with st.spinner("⚒️ Forging results..."):
             try:
-                # 1. Search Results
                 params = {"q": query, "api_key": api_key}
                 search_data = requests.get("https://serpapi.com/search.json", params=params).json()
                 results = search_data.get("organic_results", [])
@@ -71,4 +63,36 @@ if st.button("Engage Engines"):
                 timeline_data = []
 
                 for res in results[:5]:
-                    item = {"Title": res['title'], "Link": res['link'], "
+                    item = {"Title": res['title'], "Link": res['link'], "Snippet": res.get('snippet', '')}
+                    
+                    # Extract years for the timeline
+                    years = re.findall(r'\b(1[89]\d{2}|20\d{2})\b', item['Snippet'])
+                    
+                    if intensity == "Deep Dive":
+                        content = requests.get(f"https://r.jina.ai/{res['link']}").text
+                        item["Deep Intel"] = content[:1800] + "... [TRIMMED]"
+                        years += re.findall(r'\b(1[89]\d{2}|20\d{2})\b', content[:5000])
+                    
+                    for year in set(years):
+                        timeline_data.append({"Year": int(year), "Source": item['Title'][:30]})
+                    
+                    final_results.append(item)
+                
+                st.session_state['results'] = pd.DataFrame(final_results)
+                st.session_state['timeline'] = pd.DataFrame(timeline_data)
+                
+            except Exception as e:
+                st.error(f"Search Error: {e}")
+
+# --- Display ---
+if 'results' in st.session_state:
+    st.subheader("📊 Key Sources Found")
+    st.dataframe(st.session_state['results'], use_container_width=True)
+
+    if not st.session_state['timeline'].empty:
+        st.subheader("📅 Historical Project Timeline")
+        fig = px.scatter(st.session_state['timeline'], x="Year", y="Source", color="Year", template="plotly_dark")
+        st.plotly_chart(fig, use_container_width=True)
+
+    csv = st.session_state['results'].to_csv(index=False).encode('utf-8')
+    st.download_button("📥 Download CSV", data=csv, file_name="research.csv")
