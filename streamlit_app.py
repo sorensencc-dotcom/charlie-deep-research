@@ -8,6 +8,69 @@ from datetime import datetime
 # --- Cast Iron Charlie Branding ---
 st.set_page_config(page_title="Deep Research Lab", page_icon="⚒️", layout="wide")
 
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;800&display=swap');
+
+    /* Design System Vars */
+    :root {
+      --black: #0a0806;
+      --forge: #1a1410;
+      --iron: #2c2420;
+      --rust: #8B3A1A;
+      --ember: #C4501A;
+      --brass: #B8922A;
+      --ash: #9a9088;
+      --bone: #e8e0d4;
+    }
+
+    .main {
+        background-color: var(--black);
+    }
+    
+    h1, h2, h3 {
+        font-family: 'Playfair Display', serif !important;
+        color: var(--bone) !important;
+    }
+    
+    .stMarkdown, p, span, div {
+        font-family: 'Libre Baskerville', serif !important;
+    }
+    
+    .stButton>button {
+        font-family: 'Barlow Condensed', sans-serif !important;
+        background-color: var(--ember) !important;
+        color: var(--black) !important;
+        border-radius: 0px !important;
+        border: none !important;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    
+    .stButton>button:hover {
+        background-color: var(--rust) !important;
+    }
+    
+    .stTextInput>div>div>input {
+        background-color: var(--forge) !important;
+        color: var(--bone) !important;
+        border-radius: 0px !important;
+        border: 1px solid var(--iron) !important;
+    }
+    
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: var(--forge) !important;
+        border-right: 1px solid var(--iron);
+    }
+    
+    [data-testid="stMetricValue"] {
+        color: var(--brass) !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # --- Persistence Layer ---
 DB_FILE = "research_inventory.csv"
 
