@@ -1,72 +1,41 @@
-# CIC Master Sheet Diagrams
+# CIC Industrial Diagrams
 
-8 SVG architecture diagram templates for the CIC Master Sheet Generator.
+This directory contains the eight canonical CIC Industrial‑style diagrams:
 
-## Diagram Templates
+1. Multi‑Region Architecture
+2. Region Registry & Proxy Logic
+3. Harvester Pipeline
+4. Orchestrator Flow
+5. Queue & DLQ Management
+6. Reverse Image Search Workflow
+7. Control Plane Internal Routing
+8. Telemetry & Observability
 
-### Row 1: GLOBAL
+Each diagram follows the CIC Industrial Design System:
 
-- **multi_region.svg** — Multi-Region Architecture
-  - 4-region hub topology with central coordination node
-  - Shows US-E, US-W, EU, APAC regions
+- Forge black background
+- Brass grid and strokes
+- Ember nodes
+- Playfair / Barlow / Baskerville typography
 
-- **region_registry.svg** — Region Registry & Proxy Logic
-  - Registry lookup system with proxy nodes (P1, P2, P3)
-  - Routing logic distribution
+## Master Sheets
 
-### Row 2: PIPELINE
+Two master sheet variants are generated from these diagrams:
 
-- **harvester.svg** — Harvester Pipeline
-  - 5-stage data ingestion: Fetch → Parse → Validate → Enrich → Store
-  - DLQ error routing
+### A — Raster‑Embedded
 
-- **orchestrator.svg** — Orchestrator Flow
-  - Task queue input, central orchestrator
-  - Worker pool (W1, W2, W3), status database
+```bash
+python ../generate_master_sheet.py A
+```
 
-- **queue_dlq.svg** — Queue & DLQ Management
-  - Primary queue, processor node
-  - Success path, DLQ path, retry queue
+### B — Full‑SVG (Inline)
 
-### Row 3: SYSTEM-WIDE
+```bash
+python ../generate_master_sheet.py B
+```
 
-- **image_search.svg** — Reverse Image Search Workflow
-  - Feature extraction → Similarity search → Results ranking
-  - Index node integration
+Outputs are written to:
 
-- **control_plane.svg** — Control Plane Internal Routing
-  - Policies and rules input
-  - Policy distribution to data plane nodes (DP1, DP2)
-  - Sync status tracking
-
-- **telemetry.svg** — Telemetry & Observability
-  - 3 data sources → Collector → Aggregation
-  - 3 outputs: Metrics, Logs, Traces
-
-## Specifications
-
-- **Size:** 1200×800px
-- **Format:** SVG (vector, scalable)
-- **Grid:** Brass (#2C2420) 50px spacing
-- **Strokes:** Brass (#B8922A) 2px width
-- **Nodes:** Ember (#C4501A) circles with 20-30px radius
-- **Connectors:** Brass arrows, 1.5px width
-
-## Styling
-
-All diagrams use:
-
-- **Background:** Forge black (#1A1410)
-- **Fonts:**
-  - Titles: Playfair Display (28px bold)
-  - Labels: Barlow Condensed (14px semi-bold)
-- **No shadows, no gradients, no rounded corners**
-- **Strict geometric alignment**
-
-## Usage
-
-The master sheet generator automatically:
-- **Variant A (Raster):** References these as `<image>` tags
-- **Variant B (Full-SVG):** Inlines full SVG content as `<g>` groups
-
-All diagrams are pre-built and ready for embedding.
+```bash
+../master_sheets/
+```
