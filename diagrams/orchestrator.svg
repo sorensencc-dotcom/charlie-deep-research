@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Orchestrator Flow</text>
+  <rect class="box" x="500" y="250" width="120" height="100"/>
+  <text class="label" x="560" y="305" text-anchor="middle">Orchestrator</text>
+  <rect class="box" x="150" y="150" width="120" height="80"/>
+  <text class="label" x="210" y="195" text-anchor="middle">Task Queue</text>
+  <line class="connector" x1="270" y1="190" x2="500" y2="280" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="700" cy="150" r="25"/>
+  <text class="label" x="700" y="155" text-anchor="middle">W</text>
+  <line class="connector" x1="620" y1="250" x2="675" y2="150" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="700" cy="300" r="25"/>
+  <text class="label" x="700" y="305" text-anchor="middle">W</text>
+  <line class="connector" x1="620" y1="300" x2="675" y2="300" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="700" cy="450" r="25"/>
+  <text class="label" x="700" y="455" text-anchor="middle">W</text>
+  <line class="connector" x1="620" y1="350" x2="675" y2="450" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="150" y="400" width="120" height="80"/>
+  <text class="label" x="210" y="445" text-anchor="middle">Status DB</text>
+  <line class="connector" x1="560" y1="350" x2="210" y2="400" marker-end="url(#arrowhead)"/>
+</svg>

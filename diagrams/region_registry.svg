@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Region Registry &amp; Proxy Logic</text>
+  <rect class="box" x="100" y="300" width="120" height="80"/>
+  <text class="label" x="160" y="345" text-anchor="middle">Request</text>
+  <rect class="box" x="300" y="250" width="160" height="180"/>
+  <text class="label" x="380" y="345" text-anchor="middle">Region Registry</text>
+  <circle class="node" cx="600" cy="140" r="20"/>
+  <text class="label" x="600" y="145" text-anchor="middle">P1</text>
+  <line class="connector" x1="460" y1="340" x2="580" y2="140" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="600" cy="340" r="20"/>
+  <text class="label" x="600" y="345" text-anchor="middle">P2</text>
+  <line class="connector" x1="460" y1="340" x2="580" y2="340" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="600" cy="540" r="20"/>
+  <text class="label" x="600" y="545" text-anchor="middle">P3</text>
+  <line class="connector" x1="460" y1="340" x2="580" y2="540" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="750" y="250" width="140" height="180"/>
+  <text class="label" x="820" y="330" text-anchor="middle">Route</text>
+  <text class="label" x="820" y="350" text-anchor="middle">Logic</text>
+  <line class="connector" x1="460" y1="340" x2="750" y2="340" marker-end="url(#arrowhead)"/>
+</svg>

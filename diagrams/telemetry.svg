@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Telemetry &amp; Observability</text>
+  <circle class="node" cx="150" cy="150" r="20"/>
+  <text class="label" x="150" y="155" text-anchor="middle">S1</text>
+  <circle class="node" cx="150" cy="350" r="20"/>
+  <text class="label" x="150" y="355" text-anchor="middle">S2</text>
+  <circle class="node" cx="150" cy="550" r="20"/>
+  <text class="label" x="150" y="555" text-anchor="middle">S3</text>
+  <rect class="box" x="350" y="300" width="120" height="120"/>
+  <text class="label" x="410" y="365" text-anchor="middle">Collector</text>
+  <line class="connector" x1="170" y1="150" x2="350" y2="360" marker-end="url(#arrowhead)"/>
+  <line class="connector" x1="170" y1="350" x2="350" y2="360" marker-end="url(#arrowhead)"/>
+  <line class="connector" x1="170" y1="550" x2="350" y2="360" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="600" y="250" width="120" height="100"/>
+  <text class="label" x="660" y="305" text-anchor="middle">Aggregation</text>
+  <line class="connector" x1="470" y1="360" x2="600" y2="300" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="840" y="160" width="120" height="80"/>
+  <text class="label" x="900" y="205" text-anchor="middle">Metrics</text>
+  <line class="connector" x1="720" y1="300" x2="840" y2="200" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="840" y="310" width="120" height="80"/>
+  <text class="label" x="900" y="355" text-anchor="middle">Logs</text>
+  <line class="connector" x1="720" y1="300" x2="840" y2="350" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="840" y="460" width="120" height="80"/>
+  <text class="label" x="900" y="505" text-anchor="middle">Traces</text>
+  <line class="connector" x1="720" y1="300" x2="840" y2="500" marker-end="url(#arrowhead)"/>
+</svg>

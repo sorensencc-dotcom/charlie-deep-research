@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+      .grid-line { stroke: #2C2420; stroke-width: 0.5; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Multi-Region Architecture</text>
+  <circle class="node" cx="600" cy="300" r="30"/>
+  <text class="label" x="600" y="305" text-anchor="middle">HUB</text>
+  <circle class="node" cx="200" cy="150" r="25"/>
+  <text class="label" x="200" y="155" text-anchor="middle">US-E</text>
+  <line class="connector" x1="200" y1="150" x2="570" y2="300" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="1000" cy="150" r="25"/>
+  <text class="label" x="1000" y="155" text-anchor="middle">US-W</text>
+  <line class="connector" x1="1000" y1="150" x2="570" y2="300" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="200" cy="450" r="25"/>
+  <text class="label" x="200" y="455" text-anchor="middle">EU</text>
+  <line class="connector" x1="200" y1="450" x2="570" y2="300" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="1000" cy="450" r="25"/>
+  <text class="label" x="1000" y="455" text-anchor="middle">APAC</text>
+  <line class="connector" x1="1000" y1="450" x2="570" y2="300" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="120" y="90" width="160" height="140"/>
+  <text class="label" x="200" y="165" text-anchor="middle">Region 1</text>
+  <rect class="box" x="920" y="90" width="160" height="140"/>
+  <text class="label" x="1000" y="165" text-anchor="middle">Region 2</text>
+  <rect class="box" x="120" y="390" width="160" height="140"/>
+  <text class="label" x="200" y="465" text-anchor="middle">Region 3</text>
+  <rect class="box" x="920" y="390" width="160" height="140"/>
+  <text class="label" x="1000" y="465" text-anchor="middle">Region 4</text>
+</svg>

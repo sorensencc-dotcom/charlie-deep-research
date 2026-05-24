@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Queue &amp; DLQ Management</text>
+  <rect class="box" x="200" y="250" width="140" height="100"/>
+  <text class="label" x="270" y="295" text-anchor="middle">Primary</text>
+  <text class="label" x="270" y="315" text-anchor="middle">Queue</text>
+  <circle class="node" cx="500" cy="300" r="25"/>
+  <text class="label" x="500" y="305" text-anchor="middle">PROC</text>
+  <line class="connector" x1="340" y1="300" x2="475" y2="300" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="700" y="200" width="120" height="80"/>
+  <text class="label" x="760" y="245" text-anchor="middle">Success</text>
+  <line class="connector" x1="525" y1="280" x2="700" y2="240" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="700" y="400" width="120" height="80"/>
+  <text class="label" x="760" y="445" text-anchor="middle">DLQ</text>
+  <line class="connector" x1="525" y1="320" x2="700" y2="440" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="200" y="500" width="140" height="80"/>
+  <text class="label" x="270" y="535" text-anchor="middle">Retry</text>
+  <text class="label" x="270" y="555" text-anchor="middle">Queue</text>
+  <line class="connector" x1="270" y1="500" x2="270" y2="350" marker-end="url(#arrowhead)"/>
+</svg>

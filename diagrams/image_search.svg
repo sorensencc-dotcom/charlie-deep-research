@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
+      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
+      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .node { fill: #C4501A; }
+      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#1A1410"/>
+  <text class="title" x="40" y="50">Reverse Image Search Workflow</text>
+  <rect class="box" x="100" y="300" width="100" height="100"/>
+  <text class="label" x="150" y="345" text-anchor="middle">Input Image</text>
+  <rect class="box" x="280" y="280" width="110" height="140"/>
+  <text class="label" x="335" y="340" text-anchor="middle">Feature</text>
+  <text class="label" x="335" y="360" text-anchor="middle">Extraction</text>
+  <line class="connector" x1="200" y1="350" x2="280" y2="350" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="480" y="280" width="110" height="140"/>
+  <text class="label" x="535" y="340" text-anchor="middle">Similarity</text>
+  <text class="label" x="535" y="360" text-anchor="middle">Search</text>
+  <line class="connector" x1="390" y1="350" x2="480" y2="350" marker-end="url(#arrowhead)"/>
+  <circle class="node" cx="590" cy="550" r="30"/>
+  <text class="label" x="590" y="555" text-anchor="middle">Index</text>
+  <line class="connector" x1="535" y1="420" x2="590" y2="520" marker-end="url(#arrowhead)"/>
+  <rect class="box" x="700" y="280" width="110" height="140"/>
+  <text class="label" x="755" y="340" text-anchor="middle">Results</text>
+  <text class="label" x="755" y="360" text-anchor="middle">Ranking</text>
+  <line class="connector" x1="590" y1="350" x2="700" y2="350" marker-end="url(#arrowhead)"/>
+</svg>
