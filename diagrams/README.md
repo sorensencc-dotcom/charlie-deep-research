@@ -1,36 +1,72 @@
 # CIC Master Sheet Diagrams
 
-Placeholder directory for diagram assets referenced by the master sheet generator.
+8 SVG architecture diagram templates for the CIC Master Sheet Generator.
 
-## Expected Diagrams
+## Diagram Templates
 
 ### Row 1: GLOBAL
-- `multi_region.png` — Multi-Region Architecture
-- `region_registry.png` — Region Registry & Proxy Logic
+
+- **multi_region.svg** — Multi-Region Architecture
+  - 4-region hub topology with central coordination node
+  - Shows US-E, US-W, EU, APAC regions
+
+- **region_registry.svg** — Region Registry & Proxy Logic
+  - Registry lookup system with proxy nodes (P1, P2, P3)
+  - Routing logic distribution
 
 ### Row 2: PIPELINE
-- `harvester.png` — Harvester Pipeline
-- `orchestrator.png` — Orchestrator Flow
-- `queue_dlq.png` — Queue & DLQ Management
+
+- **harvester.svg** — Harvester Pipeline
+  - 5-stage data ingestion: Fetch → Parse → Validate → Enrich → Store
+  - DLQ error routing
+
+- **orchestrator.svg** — Orchestrator Flow
+  - Task queue input, central orchestrator
+  - Worker pool (W1, W2, W3), status database
+
+- **queue_dlq.svg** — Queue & DLQ Management
+  - Primary queue, processor node
+  - Success path, DLQ path, retry queue
 
 ### Row 3: SYSTEM-WIDE
-- `image_search.png` — Reverse Image Search Workflow
-- `control_plane.png` — Control Plane Internal Routing
-- `telemetry.png` — Telemetry & Observability
 
-## Format Requirements
+- **image_search.svg** — Reverse Image Search Workflow
+  - Feature extraction → Similarity search → Results ranking
+  - Index node integration
 
-- **Size:** 1200×800 px
-- **Format:** PNG (raster variant) or SVG (full-SVG variant)
-- **Style:** Industrial CIC aesthetic (see cic_design_system.md)
-- **Color Palette:** Use design system colors only
-- **Grid/Strokes:** Brass (#B8922A) grid and outlines
-- **Nodes:** Ember (#C4501A) connection points
+- **control_plane.svg** — Control Plane Internal Routing
+  - Policies and rules input
+  - Policy distribution to data plane nodes (DP1, DP2)
+  - Sync status tracking
 
-## Generator Usage
+- **telemetry.svg** — Telemetry & Observability
+  - 3 data sources → Collector → Aggregation
+  - 3 outputs: Metrics, Logs, Traces
 
-The master sheet generator will:
-- **Variant A:** Embed these PNG files as rasterized diagrams
-- **Variant B:** Inline SVG content from these files into the master sheet
+## Specifications
 
-Ensure diagram files exist before generating master sheets.
+- **Size:** 1200×800px
+- **Format:** SVG (vector, scalable)
+- **Grid:** Brass (#2C2420) 50px spacing
+- **Strokes:** Brass (#B8922A) 2px width
+- **Nodes:** Ember (#C4501A) circles with 20-30px radius
+- **Connectors:** Brass arrows, 1.5px width
+
+## Styling
+
+All diagrams use:
+
+- **Background:** Forge black (#1A1410)
+- **Fonts:**
+  - Titles: Playfair Display (28px bold)
+  - Labels: Barlow Condensed (14px semi-bold)
+- **No shadows, no gradients, no rounded corners**
+- **Strict geometric alignment**
+
+## Usage
+
+The master sheet generator automatically:
+- **Variant A (Raster):** References these as `<image>` tags
+- **Variant B (Full-SVG):** Inlines full SVG content as `<g>` groups
+
+All diagrams are pre-built and ready for embedding.
