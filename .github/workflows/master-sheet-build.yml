@@ -1,0 +1,42 @@
+name: Generate Master Sheets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'diagrams/**'
+      - 'generate_master_sheet.py'
+      - 'generate_diagrams.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Generate Variant A (Raster)
+        run: python generate_master_sheet.py A
+
+      - name: Generate Variant B (Full-SVG)
+        run: python generate_master_sheet.py B
+
+      - name: Create master_sheets directory
+        run: mkdir -p master_sheets && mv master_sheet_*.svg master_sheets/ 2>/dev/null || true
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "auto: regenerate master sheets (A & B)"
+            git push
+          fi
