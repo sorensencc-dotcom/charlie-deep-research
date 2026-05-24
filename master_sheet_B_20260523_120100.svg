@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3840" height="2160" viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+      .row-label { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 700; fill: #E8E0D4; letter-spacing: 0.15em; text-transform: uppercase; }
+      .diagram-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; fill: #E8E0D4; }
+      .diagram-box { stroke: #B8922A; stroke-width: 2; fill: none; }
+      .ember-node { fill: #C4501A; }
+    </style>
+    <pattern id="brass_grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#2C2420" stroke-width="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#2C2420" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="3840" height="2160" fill="#1A1410"/>
+  <rect width="3840" height="2160" fill="url(#brass_grid)"/>
+
+  <!-- ROW 1: GLOBAL (y=200) -->
+  <text class="row-label" x="1920" y="140" text-anchor="middle">GLOBAL</text>
+
+  <!-- Diagram 1: Multi-Region Architecture (INLINED SVG) -->
+  <g id="diagram_multi_region" data-diagram="multi_region">
+    <rect class="diagram-box" x="240" y="200" width="1200" height="800"/>
+    <g transform="translate(240, 200)">
+      <rect width="1200" height="800" fill="#1A1410"/>
+      <circle class="ember-node" cx="600" cy="300" r="30"/>
+      <text x="600" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">HUB</text>
+      <circle class="ember-node" cx="200" cy="150" r="25"/>
+      <text x="200" y="155" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">US-E</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="200" y1="150" x2="570" y2="300"/>
+      <circle class="ember-node" cx="1000" cy="150" r="25"/>
+      <text x="1000" y="155" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">US-W</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="1000" y1="150" x2="570" y2="300"/>
+      <circle class="ember-node" cx="200" cy="450" r="25"/>
+      <text x="200" y="455" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">EU</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="200" y1="450" x2="570" y2="300"/>
+      <circle class="ember-node" cx="1000" cy="450" r="25"/>
+      <text x="1000" y="455" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">APAC</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="1000" y1="450" x2="570" y2="300"/>
+      <rect class="diagram-box" x="120" y="90" width="160" height="140"/>
+      <text x="200" y="165" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Region 1</text>
+      <rect class="diagram-box" x="920" y="90" width="160" height="140"/>
+      <text x="1000" y="165" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Region 2</text>
+      <rect class="diagram-box" x="120" y="390" width="160" height="140"/>
+      <text x="200" y="465" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Region 3</text>
+      <rect class="diagram-box" x="920" y="390" width="160" height="140"/>
+      <text x="1000" y="465" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Region 4</text>
+    </g>
+    <circle class="ember-node" cx="240" cy="200" r="6"/>
+    <circle class="ember-node" cx="1440" cy="200" r="6"/>
+    <circle class="ember-node" cx="240" cy="1000" r="6"/>
+    <circle class="ember-node" cx="1440" cy="1000" r="6"/>
+  </g>
+  <text class="diagram-title" x="840" y="1050">Multi-Region Architecture</text>
+
+  <!-- Diagram 2: Region Registry & Proxy Logic (INLINED SVG) -->
+  <g id="diagram_region_registry" data-diagram="region_registry">
+    <rect class="diagram-box" x="1560" y="200" width="1200" height="800"/>
+    <g transform="translate(1560, 200)">
+      <rect width="1200" height="800" fill="#1A1410"/>
+      <rect class="diagram-box" x="100" y="300" width="120" height="80"/>
+      <text x="160" y="345" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Request</text>
+      <rect class="diagram-box" x="300" y="250" width="160" height="180"/>
+      <text x="380" y="345" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Region Registry</text>
+      <circle class="ember-node" cx="600" cy="140" r="20"/>
+      <text x="600" y="145" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">P1</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="460" y1="340" x2="580" y2="140"/>
+      <circle class="ember-node" cx="600" cy="340" r="20"/>
+      <text x="600" y="345" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">P2</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="460" y1="340" x2="580" y2="340"/>
+      <circle class="ember-node" cx="600" cy="540" r="20"/>
+      <text x="600" y="545" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">P3</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="460" y1="340" x2="580" y2="540"/>
+      <rect class="diagram-box" x="750" y="250" width="140" height="180"/>
+      <text x="820" y="330" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Route</text>
+      <text x="820" y="350" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Logic</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="460" y1="340" x2="750" y2="340"/>
+    </g>
+    <circle class="ember-node" cx="1560" cy="200" r="6"/>
+    <circle class="ember-node" cx="2760" cy="200" r="6"/>
+    <circle class="ember-node" cx="1560" cy="1000" r="6"/>
+    <circle class="ember-node" cx="2760" cy="1000" r="6"/>
+  </g>
+  <text class="diagram-title" x="2160" y="1050">Region Registry &amp; Proxy Logic</text>
+
+  <!-- ROW 2: PIPELINE (y=1160) -->
+  <text class="row-label" x="1920" y="1100" text-anchor="middle">PIPELINE</text>
+
+  <!-- Diagram 3: Harvester Pipeline (INLINED SVG) -->
+  <g id="diagram_harvester" data-diagram="harvester">
+    <rect class="diagram-box" x="120" y="1160" width="1200" height="800"/>
+    <g transform="translate(120, 1160)">
+      <rect width="1200" height="800" fill="#1A1410"/>
+      <rect class="diagram-box" x="100" y="250" width="100" height="100"/>
+      <text x="150" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Fetch</text>
+      <rect class="diagram-box" x="300" y="250" width="100" height="100"/>
+      <text x="350" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Parse</text>
+      <rect class="diagram-box" x="500" y="250" width="100" height="100"/>
+      <text x="550" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Validate</text>
+      <rect class="diagram-box" x="700" y="250" width="100" height="100"/>
+      <text x="750" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Enrich</text>
+      <rect class="diagram-box" x="900" y="250" width="100" height="100"/>
+      <text x="950" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Store</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="200" y1="300" x2="300" y2="300"/>
+      <line stroke="#B8922A" stroke-width="1.5" x1="400" y1="300" x2="500" y2="300"/>
+      <line stroke="#B8922A" stroke-width="1.5" x1="600" y1="300" x2="700" y2="300"/>
+      <line stroke="#B8922A" stroke-width="1.5" x1="800" y1="300" x2="900" y2="300"/>
+      <circle class="ember-node" cx="600" cy="500" r="20"/>
+      <text x="600" y="505" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">DLQ</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="600" y1="350" x2="600" y2="480"/>
+    </g>
+    <circle class="ember-node" cx="120" cy="1160" r="6"/>
+    <circle class="ember-node" cx="1320" cy="1160" r="6"/>
+    <circle class="ember-node" cx="120" cy="1960" r="6"/>
+    <circle class="ember-node" cx="1320" cy="1960" r="6"/>
+  </g>
+  <text class="diagram-title" x="720" y="2010">Harvester Pipeline</text>
+
+  <!-- Diagram 4: Orchestrator Flow (INLINED SVG) -->
+  <g id="diagram_orchestrator" data-diagram="orchestrator">
+    <rect class="diagram-box" x="1440" y="1160" width="1200" height="800"/>
+    <g transform="translate(1440, 1160)">
+      <rect width="1200" height="800" fill="#1A1410"/>
+      <rect class="diagram-box" x="500" y="250" width="120" height="100"/>
+      <text x="560" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Orchestrator</text>
+      <rect class="diagram-box" x="150" y="150" width="120" height="80"/>
+      <text x="210" y="195" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Task Queue</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="270" y1="190" x2="500" y2="280"/>
+      <circle class="ember-node" cx="700" cy="150" r="25"/>
+      <text x="700" y="155" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">W</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="620" y1="250" x2="675" y2="150"/>
+      <circle class="ember-node" cx="700" cy="300" r="25"/>
+      <text x="700" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">W</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="620" y1="300" x2="675" y2="300"/>
+      <circle class="ember-node" cx="700" cy="450" r="25"/>
+      <text x="700" y="455" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">W</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="620" y1="350" x2="675" y2="450"/>
+      <rect class="diagram-box" x="150" y="400" width="120" height="80"/>
+      <text x="210" y="445" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Status DB</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="560" y1="350" x2="210" y2="400"/>
+    </g>
+    <circle class="ember-node" cx="1440" cy="1160" r="6"/>
+    <circle class="ember-node" cx="2640" cy="1160" r="6"/>
+    <circle class="ember-node" cx="1440" cy="1960" r="6"/>
+    <circle class="ember-node" cx="2640" cy="1960" r="6"/>
+  </g>
+  <text class="diagram-title" x="2040" y="2010">Orchestrator Flow</text>
+
+  <!-- Diagram 5: Queue & DLQ Management (INLINED SVG) -->
+  <g id="diagram_queue_dlq" data-diagram="queue_dlq">
+    <rect class="diagram-box" x="2760" y="1160" width="1200" height="800"/>
+    <g transform="translate(2760, 1160)">
+      <rect width="1200" height="800" fill="#1A1410"/>
+      <rect class="diagram-box" x="200" y="250" width="140" height="100"/>
+      <text x="270" y="295" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Primary</text>
+      <text x="270" y="315" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Queue</text>
+      <circle class="ember-node" cx="500" cy="300" r="25"/>
+      <text x="500" y="305" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">PROC</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="340" y1="300" x2="475" y2="300"/>
+      <rect class="diagram-box" x="700" y="200" width="120" height="80"/>
+      <text x="760" y="245" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Success</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="525" y1="280" x2="700" y2="240"/>
+      <rect class="diagram-box" x="700" y="400" width="120" height="80"/>
+      <text x="760" y="445" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">DLQ</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="525" y1="320" x2="700" y2="440"/>
+      <rect class="diagram-box" x="200" y="500" width="140" height="80"/>
+      <text x="270" y="535" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Retry</text>
+      <text x="270" y="555" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#9A9088">Queue</text>
+      <line stroke="#B8922A" stroke-width="1.5" x1="270" y1="500" x2="270" y2="350"/>
+    </g>
+    <circle class="ember-node" cx="2760" cy="1160" r="6"/>
+    <circle class="ember-node" cx="3960" cy="1160" r="6"/>
+    <circle class="ember-node" cx="2760" cy="1960" r="6"/>
+    <circle class="ember-node" cx="3960" cy="1960" r="6"/>
+  </g>
+  <text class="diagram-title" x="3360" y="2010">Queue &amp; DLQ Management</text>
+
+  <!-- CIC Crest Watermark -->
+  <text x="3760" y="2120" font-family="Barlow Condensed" font-size="24" fill="#9A9088" opacity="0.22" text-anchor="end">CIC</text>
+</svg>
