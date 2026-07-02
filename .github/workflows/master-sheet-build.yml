@@ -15,6 +15,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4.1.7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -40,4 +43,5 @@ jobs:
             git commit -m "auto: regenerate master sheets (A & B)"
             git push
           fi
+
 
