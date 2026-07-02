@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     permissions:
       contents: write
     steps:
@@ -43,6 +43,7 @@ jobs:
             git commit -m "auto: regenerate master sheets (A & B)"
             git push
           fi
+
 
 
 
