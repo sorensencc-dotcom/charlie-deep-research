@@ -1,0 +1,21 @@
+treatment/TREATMENT_DRAFT_SKELETON_v1.md
+  s_738c7e781952de::t_e9745dfa976c3f 1-192
+treatment/TREATMENT_FRAMEWORK_SPEC_v1.md
+  s_738c7e781952de::t_a4f4be8fc2f084 1-248
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "01b4a5fa9bad9e2ecb5a6ef0eeab5041ed2c328c",
+  "prompts": {},
+  "sessions": {
+    "s_738c7e781952de": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "177afbb0-4654-4097-804b-047e8393b138",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
