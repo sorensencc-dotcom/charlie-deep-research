@@ -1,0 +1,56 @@
+scripts/code-review.js
+  s_738c7e781952de::t_273426eaab2ae0 23-27
+  s_738c7e781952de::t_e61f5cbe1d2fde 20-22
+  s_738c7e781952de::t_3683ca4ea56578 28-30
+  s_10803700c7fcba::t_c9d0a49f16f35b 1-19,31-203
+scripts/generate-docs.js
+  s_10803700c7fcba::t_dbf3e8874776a1 1-219
+scripts/shared-utils.js
+  s_10803700c7fcba::t_1048c08771ce4c 1-71
+ROADMAP.md
+  s_10803700c7fcba::t_ea6bd075acc542 1-107
+toolforge/GOVERNANCE.md
+  s_10803700c7fcba::t_026e053c368e5f 1-193
+toolforge/INDEX.md
+  s_10803700c7fcba::t_c36ec269f54ff0 1-145
+toolforge/OPERATOR_GUIDE.md
+  s_10803700c7fcba::t_acd56db5ccfe3a 1-284
+toolforge/README.md
+  s_10803700c7fcba::t_0c06fb44865666 1-56
+toolforge/ROADMAP.md
+  s_10803700c7fcba::t_2e9b6d1832ccf5 1-104
+toolforge/TOOL_CREATION_GUIDE.md
+  s_10803700c7fcba::t_c36ffe12cc920a 1-358
+toolforge/_TEMPLATE/README.md
+  s_10803700c7fcba::t_fdfa4526a6aefc 1
+toolforge/_TEMPLATE/VERSION.md
+  s_10803700c7fcba::t_90612b22116696 1
+toolforge/manifest.json
+  s_10803700c7fcba::t_276e645b8824d3 1-70
+toolforge/sync-tools/README.md
+  s_10803700c7fcba::t_7f6c4861508947 1-251
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "0ee903be84e5f07b5b66f70d4360f9b29e0dd9ab",
+  "prompts": {},
+  "sessions": {
+    "s_10803700c7fcba": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "45ab3f3c-7556-4cff-a7e7-250f36c3a430",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    },
+    "s_738c7e781952de": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "177afbb0-4654-4097-804b-047e8393b138",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
