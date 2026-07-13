@@ -1,0 +1,29 @@
+treatment/fable_packet_v1.json
+  s_09fca4723acab3::t_46924633abff73 1
+treatment/TREATMENT_DRAFT_v1.md
+  s_77f2f8894ba33d::t_f5d6a733c0c2a8 1-174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "ae8cd6e32e328b6d5ad03e2616b27335bde2b383",
+  "prompts": {},
+  "sessions": {
+    "s_09fca4723acab3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f581b-b904-7c72-adf6-c7a98ecc2029",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    },
+    "s_77f2f8894ba33d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0cd26d54-edf0-4781-8502-a13a23c63174",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
