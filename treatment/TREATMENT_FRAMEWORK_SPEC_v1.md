@@ -1,7 +1,7 @@
-# CAST IRON CHARLIE — Treatment Framework Specification v1
+# CAST IRON CHARLIE — Treatment Framework Specification v1.1
 
-**Status:** LOCKED — governing structural document for the *Cast Iron Charlie* documentary treatment.
-**Locked:** 2026-07-12 (Tier 1 approved).
+**Status:** LOCKED — governing structural document for the *Cast Iron Charlie* documentary treatment. Amendment §2/S3-A1 APPROVED.
+**Locked:** 2026-07-12 (Tier 1 approved; v1.1 amendment approval).
 **Change control:** Any structural deviation in downstream documents (skeleton, treatment, scripts) requires explicit amendment to this spec first.
 **Master metaphor:** *The pattern outlives the patternmaker.*
 
@@ -48,7 +48,7 @@ Eight sections. A 2026 Copenhagen framing device opens and closes the film; sect
 - **Purpose:** Highland Park and the moving assembly line: 12.5 hours to 93 minutes. Establish the Ford–Sorensen translation relationship as the film's central partnership and its central authorship dispute.
 - **Emotional function:** First triumph and first theft — the achievement becomes "Ford's assembly line." The false belief is rewarded and therefore reinforced.
 - **Industrial function:** The core invention; the geometry of flow. Everything after is this idea applied at greater scale.
-- **Geopolitical relevance:** The $5 day, the birth of industrial mass society, global fascination with "Fordism" (including its darkest admirers — flag, don't dwell).
+- **Geopolitical relevance:** The $5 day, the birth of industrial mass society, and domestic reception of "Fordism" through wages, consumption, company control, and social effects. Global/export analysis is reserved for Section 4.5 and Sections 7.3, 7.4, and 8.2.
 - **Archival opportunities:** Highland Park footage (richest early Ford archive), time-study documents, contemporary press coverage crediting Ford alone.
 - **Visual grammar:** Introduce motion — lateral tracking, conveyor rhythm, the first motion graphics (chassis-drag diagram, 12.5→93 as animated arithmetic).
 - **Narrative risks:** Over-technical exposition; also over-claiming sole credit for Sorensen (Martin, Avery, Klann all contributed). State the collaborative truth and let Sorensen's *drive* be the differentiator — rigor here buys credibility everywhere else.
@@ -244,5 +244,15 @@ Eight sections. A 2026 Copenhagen framing device opens and closes the film; sect
 *Mitigation:* Ford enters only through Sorensen's eyes; no standalone Ford biography passages. Screen-time budget: Ford never anchors a section. The frame device (family, Copenhagen) is the structural guarantee — the film opens and closes where Ford has never been.
 
 ---
+
+## Approved Amendment Register
+
+### Spec §2/S3-A1 — APPROVED
+
+- **Old clause:** Section 3 geopolitical relevance included global fascination with Fordism and foreign-regime admiration.
+- **Updated clause:** Section 3.4 is domestic-only; global/export analysis remains reserved for 4.5, 7.3, 7.4, and 8.2. Section 3.4 `[VERIFY]` flags cover domestic contemporary evidence only.
+- **Effective version:** Specification v1.1.
+- **Approved:** 2026-07-12.
+- **Governance authority:** Tier 1 approval.
 
 *End of specification. This document governs structure; the treatment executes it.*
