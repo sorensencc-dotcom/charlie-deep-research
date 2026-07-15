@@ -29,7 +29,7 @@ Source: CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL (39 units).
 | V-2.1 | NON-INGESTIBLE until correction (manifest asset gated on retrieval). | NODE-BLOCKED (origin timeline node unverified; S2 dates inherit uncertainty). | SCRIPT-BLOCKED (departure-year claim provisional). | AUDIT-DEFECT (primary-record gap). |
 | V-2.4 | NON-INGESTIBLE until correction (employment-record asset gated). | NODE-BLOCKED (partnership-start node imprecise). | SCRIPT-BLOCKED ("circa 1905" blocked until exact date). | AUDIT-DEFECT (timeline-imprecision flag). |
 | V-3.2 | NON-INGESTIBLE until correction (memoir-derived claim tagged contested). | NODE-BLOCKED (chassis-drag node single-source). | SCRIPT-BLOCKED (primacy risk R2 if unqualified). | AUDIT-DEFECT (single-source contested claim). |
-| V-3.4a | NON-INGESTIBLE until correction (flag blocked from registry until reworded). | NODE-BLOCKED (geo-scope semantic drift inherited downstream). | SCRIPT-BLOCKED (foreign-scope wording violates §2/S3-A1 — halt). | AUDIT-DEFECT (non-conformance with locked spec v1.1). |
+| V-3.4a | INGESTIBLE (flag reworded + re-verified 2026-07-14; conformant with §2/S3-A1). | NODE-ADMISSIBLE (geo-scope drift cleared; domestic-only scope confirmed). | SCRIPT-ADMISSIBLE (domestic-scoped wording matches locked clause verbatim). | AUDIT-CLEAN (conformant with locked spec v1.1; prior non-conformance resolved). |
 | V-3.5 | NON-INGESTIBLE until correction (press-clipping assets pending pull). | NODE-BLOCKED (first-theft thesis node uncited). | SCRIPT-BLOCKED (uncited attribution). | AUDIT-DEFECT (thesis-beat unsupported). |
 | V-4.2 | NON-INGESTIBLE until correction (financial-record asset gated). | NODE-BLOCKED ($50M keystone propagates to logline/§4 table unverified). | SCRIPT-BLOCKED (figure inherited unverified). | AUDIT-DEFECT (financial-claim gap). |
 | V-4.3 | NON-INGESTIBLE until correction (foundry-record assets pending). | NODE-BLOCKED (throughput node uncited). | SCRIPT-BLOCKED (drumbeat #2 numbers uncited). | AUDIT-DEFECT (production-data gap). |
@@ -66,51 +66,51 @@ Source: CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL (39 units).
 
 ### A. INGESTION_GOVERNANCE_BLOCK
 
-**NON-INGESTIBLE (FAIL + NEEDS_REVISION — 38):**
-V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.4a, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
+**NON-INGESTIBLE (NEEDS_REVISION — 37):**
+V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
-**INGESTIBLE (PASS — 1):**
-V-8.4
+**INGESTIBLE (PASS — 2):**
+V-3.4a (re-verified 2026-07-14), V-8.4
 
 ### B. LINEAGE_GOVERNANCE_BLOCK
 
-**NODE-BLOCKED (38):**
-V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.4a, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
+**NODE-BLOCKED (37):**
+V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
-**NODE-ADMISSIBLE (1):**
-V-8.4
+**NODE-ADMISSIBLE (2):**
+V-3.4a (re-verified 2026-07-14), V-8.4
 
 ### C. SCRIPT_GOVERNANCE_BLOCK
 
-**SCRIPT-BLOCKED (38):**
-V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.4a, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
+**SCRIPT-BLOCKED (37):**
+V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
-**SCRIPT-ADMISSIBLE (1):**
-V-8.4
+**SCRIPT-ADMISSIBLE (2):**
+V-3.4a (re-verified 2026-07-14), V-8.4
 
 ### D. AUDIT_GOVERNANCE_BLOCK
 
-**AUDIT-DEFECT (38):**
-V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.4a, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
+**AUDIT-DEFECT (37):**
+V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
-**AUDIT-CLEAN (1):**
-V-8.4
+**AUDIT-CLEAN (2):**
+V-3.4a (re-verified 2026-07-14), V-8.4
 
 ## 6. CIC_GOVERNANCE_INTEGRITY_V1.1
 
 | CHECK | RESULT | EVIDENCE |
 |---|---|---|
-| FAIL units remain blocked | PASS | V-3.4a NON-INGESTIBLE + NODE-BLOCKED + SCRIPT-BLOCKED + AUDIT-DEFECT across all channels. |
+| FAIL units remain blocked | PASS | No FAIL units remain; V-3.4a corrected and re-verified to PASS 2026-07-14 — no unit currently in FAIL state. |
 | NEEDS_REVISION units remain gated | PASS | All 37 NEEDS_REVISION units gated on all four channels; none admitted. |
-| PASS units remain admissible | PASS | V-8.4 INGESTIBLE + NODE-ADMISSIBLE + SCRIPT-ADMISSIBLE + AUDIT-CLEAN. |
-| No unit crosses channels without correction | PASS | 38 gated units carry uniform blocked marks; zero partial admissions. Only V-8.4 (PASS) crosses. |
-| No semantic drift vs Spec v1.1 / amendment §2/S3-A1 | PASS | Channel marks derived solely from DOWNSTREAM_IMPACT column; statuses/refs/impacts unaltered; V-3.4a domestic-only scope enforced. |
+| PASS units remain admissible | PASS | V-3.4a and V-8.4 both INGESTIBLE + NODE-ADMISSIBLE + SCRIPT-ADMISSIBLE + AUDIT-CLEAN. |
+| No unit crosses channels without correction | PASS | V-3.4a's cross to admissible is backed by a documented correction + independent re-verification (source: CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL §8). No other unit crosses without equivalent evidence. |
+| No semantic drift vs Spec v1.1 / amendment §2/S3-A1 | PASS | Channel marks derived solely from DOWNSTREAM_IMPACT / re-verification record; V-3.4a's admissible marks trace to confirmed domestic-only wording match against locked clause. |
 
-GOVERNANCE_INTEGRITY_STATUS: CLEAN (5/5 checks PASS)
+GOVERNANCE_INTEGRITY_STATUS: CLEAN (5/5 checks PASS) — updated 2026-07-14 post re-verification
 
 ## 7. CIC_GOVERNANCE_STATUS_V1.1
 
-- 1 admissible (PASS).
-- 1 blocked (FAIL).
+- 2 admissible (PASS): V-3.4a, V-8.4.
+- 0 blocked (FAIL).
 - 37 gated (NEEDS_REVISION).
-- Governance inheritance complete.
+- Governance inheritance complete — updated 2026-07-14 (V-3.4a re-verified FAIL→PASS).

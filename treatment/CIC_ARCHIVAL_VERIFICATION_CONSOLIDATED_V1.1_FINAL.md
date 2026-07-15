@@ -7,15 +7,15 @@ Independent archival verification complete.
 
 ## 2. SUMMARY COUNTS
 
-- PASS: 1
-- FAIL: 1
+- PASS: 2
+- FAIL: 0
 - NEEDS_REVISION: 37
 
 ## 3. DEFECT CLASS SUMMARY
 
 | DEFECT_CLASS | ITEM_IDS | COUNT |
 |---|---|---|
-| SPEC_NONCONFORMANCE | V-3.4a (secondary: GEO_SCOPE_DRIFT) | 1 |
+| SPEC_NONCONFORMANCE | — (V-3.4a cleared on re-verification 2026-07-14) | 0 |
 | PRIMARY_RECORD_GAP | V-1.3, V-2.1, V-4.2, V-4.5a, V-6.2a, V-6.3, V-6.4, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a | 12 |
 | UNCITED_ASSERTION | V-3.5, V-4.3, V-4.5b, V-5.2a, V-5.2b, V-5.4a, V-8.1b, V-8.1c, V-8.2 | 9 |
 | SINGLE_SOURCE_RISK | V-3.2, V-4.4, V-5.3, V-6.1, V-6.2b, V-6.5, V-6.6 | 7 |
@@ -24,7 +24,7 @@ Independent archival verification complete.
 | TIMELINE_NODE_IMPRECISION | V-2.4, V-7.1 | 2 |
 | TEMPORAL_INTEGRITY | V-5.5 | 1 |
 | PROVENANCE_GAP | V-8.3 | 1 |
-| GEO_SCOPE_DRIFT | (secondary of V-3.4a) | 0 primary |
+| GEO_SCOPE_DRIFT | — (cleared on re-verification 2026-07-14) | 0 |
 
 ## 4. CONSOLIDATED TABLE
 
@@ -37,7 +37,7 @@ Independent archival verification complete.
 | V-2.1 | NEEDS_REVISION | §2·S2 Archival opportunities; §2·S2 Geopolitical relevance | Beat 2.1. Claim: emigration records, ship manifest, exact departure year (1881 birth context). Source basis: unconfirmed. | Source manifest + departure year from Danish/immigration archives; cite record ID. | Lineage: origin timeline node unverified; all S2 dates inherit uncertainty. |
 | V-2.4 | NEEDS_REVISION | §2·S2 Purpose; §2·S2 Archival opportunities | Beat 2.4. Claim: Ford hire "circa 1905," patternmaker role. Source basis: approximate, unconfirmed. | Confirm exact hiring date + initial title from Ford/Piquette employment records; replace "circa." | Script inheritance: approximate date propagates as fact. Lineage: partnership-start node imprecise. |
 | V-3.2 | NEEDS_REVISION | §2·S3 Narrative risks; §8 R2 | Beat 3.2. Claim: 1908 Piquette chassis-drag experiment. Source basis: Sorensen memoir; date + primacy disputed by historians. Interested-witness source. | Present as contested; cite memoir AND ≥1 dissenting historian per R2 skepticism rule; do not assert as settled. | Audit: single-source contested claim. Script inheritance: primacy risk (R2 over-heroization) if unqualified. |
-| V-3.4a | FAIL | Amendment §2/S3-A1; §2·S3 Geopolitical relevance | Beat 3.4. Flag reads "foreign press and doctrinal citations of Fordism." Approved amendment §2/S3-A1 scopes S3.4 [VERIFY] to DOMESTIC contemporary evidence only; global/export reserved to 4.5/7.3/7.4/8.2. Flag wording contradicts locked v1.1 spec. Residual drift beyond prior validation-report FAIL. | Reword flag to domestic contemporary evidence (wages/consumption/company-control/social reception); remove "foreign press/doctrinal." Align to §2/S3-A1. | Lineage: semantic drift inherited by all downstream scripts/audit docs. Audit: direct non-conformance with locked spec v1.1. |
+| V-3.4a | PASS | Amendment §2/S3-A1; §2·S3 Geopolitical relevance | Beat 3.4. RE-VERIFIED 2026-07-14 (fresh-actor pass, independent of remediation edit). Flag now reads "specific contemporary domestic press and commentary on the five-dollar day's wage-and-control duality to be sourced." Wording checked against locked clause "Section 3.4 [VERIFY] flags cover domestic contemporary evidence only" — exact match, no foreign/global/doctrinal terms remain. Header status line discloses the non-verbatim rewording accurately. Spec-conformant. | — | Lineage: clean — no inherited drift. Audit: conformant with locked spec v1.1; prior non-conformance cleared. |
 | V-3.5 | NEEDS_REVISION | §2·S3 Archival opportunities; §2·S3 Emotional function | Beat 3.5. Claim: 1913–14 press crediting Ford alone. Source basis: "to be pulled." No clippings sourced. | Pull dated 1913–14 press items; cite publication + date to substantiate "first theft." | Audit: thesis-beat (first theft) unsupported. Script inheritance: uncited attribution. |
 | V-4.2 | NEEDS_REVISION | §2·S4 Purpose; §4 milestone table | Beat 4.2. Claim: ~$50M V-8 retooling bet. Source basis: memoir + secondary; primary financials unconfirmed. Figure recurs in logline + §4 table. | Confirm $50M against primary Ford financial records; cite. Flag as memoir-derived until then. | Lineage: keystone figure propagates to logline/§4 table unverified. Audit: financial-claim gap. |
 | V-4.3 | NEEDS_REVISION | §2·S4 Archival opportunities | Beat 4.3. Claim: scrap rates, failure timeline, "3,000/day." Source basis: to be sourced from Rouge foundry records + memoir. | Source scrap/failure data + production rate from foundry records; cite. | Script inheritance: throughput drumbeat #2 numbers uncited. Audit: production-data gap. |
@@ -81,7 +81,7 @@ Independent archival verification complete.
 | V-2.1 | Manifest asset gated on retrieval. | Origin timeline node unverified; S2 dates inherit uncertainty. | Departure-year claim held provisional. | Primary-record gap. |
 | V-2.4 | Employment-record asset gated. | Partnership-start node imprecise. | "Circa 1905" propagates as fact — block until exact date. | Timeline-imprecision flag. |
 | V-3.2 | Memoir-derived claim tagged contested. | Chassis-drag node single-source. | Primacy risk (R2) if unqualified — carry contested tag. | Single-source contested claim. |
-| V-3.4a | Flag blocked from registry until reworded. | Geo-scope semantic drift inherited by all downstream scripts/audit docs. | Foreign-scope wording propagates against §2/S3-A1 — halt. | Direct non-conformance with locked spec v1.1. |
+| V-3.4a | Flag reworded; asset admissible on re-verification. | Geo-scope drift cleared — no inherited semantic mismatch. | Domestic-scoped wording conformant with §2/S3-A1 — clear. | Conformant with locked spec v1.1 (re-verified 2026-07-14). |
 | V-3.5 | Press-clipping assets pending pull. | First-theft thesis node uncited. | Uncited attribution propagates. | Thesis-beat unsupported. |
 | V-4.2 | Financial-record asset gated. | $50M keystone propagates to logline + §4 table unverified. | Figure inherited across script unverified. | Financial-claim gap. |
 | V-4.3 | Foundry-record assets pending. | Throughput node uncited. | Drumbeat #2 numbers propagate uncited. | Production-data gap. |
@@ -118,32 +118,33 @@ Independent archival verification complete.
 
 | CHECK | RESULT | EVIDENCE |
 |---|---|---|
-| All FAIL + NEEDS_REVISION units map to ≥1 defect class | PASS | 38 defect-bearing units (1 FAIL + 37 NEEDS_REVISION); defect-class membership sum = 2+12+9+7+3+2+2+1+1 = 38. Full coverage. |
-| No PASS unit appears in any defect class | PASS | V-8.4 (sole PASS) absent from all 10 defect-class rows. |
-| No item in multiple classes except explicit secondary | PASS | Only multi-class entry: V-3.4a (SPEC_NONCONFORMANCE primary; GEO_SCOPE_DRIFT secondary, explicitly listed). All other 37 units appear in exactly one class. |
-| No semantic drift vs Spec v1.1 / amendment §2/S3-A1 | PASS | Statuses, SPEC_REFs, provenance notes, corrections, impacts reproduced verbatim. V-3.4a FAIL preserved (domestic-only scope enforced per §2/S3-A1). No FAIL/NEEDS_REVISION softened. |
+| All FAIL + NEEDS_REVISION units map to ≥1 defect class | PASS | 37 defect-bearing units (0 FAIL + 37 NEEDS_REVISION); defect-class membership sum = 12+9+7+3+2+2+1+1 = 37. Full coverage. |
+| No PASS unit appears in any defect class | PASS | V-8.4 and V-3.4a (both PASS) absent from all defect-class rows. |
+| No item in multiple classes except explicit secondary | PASS | No multi-class entries remain (V-3.4a's SPEC_NONCONFORMANCE/GEO_SCOPE_DRIFT membership cleared on re-verification). All 37 remaining units appear in exactly one class. |
+| No semantic drift vs Spec v1.1 / amendment §2/S3-A1 | PASS | Statuses, SPEC_REFs, provenance notes, corrections, impacts reproduced verbatim except V-3.4a (updated via documented re-verification, §8). No open FAIL/NEEDS_REVISION softened. |
 
-INTEGRITY_STATUS: CLEAN (4/4 checks PASS)
+INTEGRITY_STATUS: CLEAN (4/4 checks PASS) — re-verified 2026-07-14
 
 ## 7. CIC_REGISTRY_READY_V1.1
 
-**REGISTRY-READY (PASS — 1):**
+**REGISTRY-READY (PASS — 2):**
+- V-3.4a (re-verified 2026-07-14)
 - V-8.4
 
-**BLOCKED — FAIL, correction mandatory before registry (1):**
-- V-3.4a
+**BLOCKED — FAIL, correction mandatory before registry (0):**
+- none
 
 **REQUIRES CORRECTION — NEEDS_REVISION, gated from registry (37):**
 - V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
-REGISTRY_ADMISSION: 1 admitted · 38 gated (1 FAIL + 37 NEEDS_REVISION) · total 39
+REGISTRY_ADMISSION: 2 admitted · 37 gated (0 FAIL + 37 NEEDS_REVISION) · total 39
 
 ## 8. REMEDIATION LOG
 
-Matrix (§1–7) is the immutable verification record executed by fresh actor. Corrections applied post-verification recorded here; statuses above NOT mutated — re-verification is a separate pass.
+Original matrix (§1–7 as first issued) was the immutable verification record executed by fresh actor 2026-07-14. One remediation cycle has since run against it; the table and counts above reflect the post-remediation, re-verified state. This log is the audit trail for that transition.
 
 | ITEM_ID | ACTION | DETAIL | POST-STATE |
 |---|---|---|---|
-| V-3.4a | CORRECTED | Treatment beat 3.4 `[VERIFY]` flag reworded from "specific contemporary foreign press and doctrinal citations of Fordism" → "specific contemporary domestic press and commentary on the five-dollar day's wage-and-control duality." Foreign-press/doctrinal scope removed; domestic scope enforced per amendment §2/S3-A1. Header status line updated to record rewording. | RESOLVED — pending re-verification. FAIL cleared at source; not yet re-run through verification pass. |
+| V-3.4a | CORRECTED, then RE-VERIFIED | Treatment beat 3.4 `[VERIFY]` flag reworded from "specific contemporary foreign press and doctrinal citations of Fordism" → "specific contemporary domestic press and commentary on the five-dollar day's wage-and-control duality." Foreign-press/doctrinal scope removed; domestic scope enforced per amendment §2/S3-A1. Header status line updated to record rewording. Re-verification pass (2026-07-14, fresh actor, independent of the edit) confirmed wording matches locked clause verbatim. | PASS — re-verified 2026-07-14. FAIL cleared and confirmed; admitted to registry. |
 
-REMEDIATION_STATUS: 1 FAIL corrected (V-3.4a) · 37 NEEDS_REVISION open (require sourcing) · 1 PASS (V-8.4)
+REMEDIATION_STATUS: 1 FAIL corrected + re-verified to PASS (V-3.4a) · 37 NEEDS_REVISION open (require sourcing) · 2 PASS (V-3.4a, V-8.4)
