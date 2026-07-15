@@ -137,3 +137,13 @@ INTEGRITY_STATUS: CLEAN (4/4 checks PASS)
 - V-1.2a, V-1.2b, V-1.2c, V-1.3, V-2.1, V-2.4, V-3.2, V-3.5, V-4.2, V-4.3, V-4.4, V-4.5a, V-4.5b, V-5.2a, V-5.2b, V-5.3, V-5.4a, V-5.4b, V-5.5, V-6.1, V-6.2a, V-6.2b, V-6.3, V-6.4, V-6.5, V-6.6, V-7.1, V-7.2, V-7.3a, V-7.3b, V-7.4, V-7.5, V-8.1a, V-8.1b, V-8.1c, V-8.2, V-8.3
 
 REGISTRY_ADMISSION: 1 admitted · 38 gated (1 FAIL + 37 NEEDS_REVISION) · total 39
+
+## 8. REMEDIATION LOG
+
+Matrix (§1–7) is the immutable verification record executed by fresh actor. Corrections applied post-verification recorded here; statuses above NOT mutated — re-verification is a separate pass.
+
+| ITEM_ID | ACTION | DETAIL | POST-STATE |
+|---|---|---|---|
+| V-3.4a | CORRECTED | Treatment beat 3.4 `[VERIFY]` flag reworded from "specific contemporary foreign press and doctrinal citations of Fordism" → "specific contemporary domestic press and commentary on the five-dollar day's wage-and-control duality." Foreign-press/doctrinal scope removed; domestic scope enforced per amendment §2/S3-A1. Header status line updated to record rewording. | RESOLVED — pending re-verification. FAIL cleared at source; not yet re-run through verification pass. |
+
+REMEDIATION_STATUS: 1 FAIL corrected (V-3.4a) · 37 NEEDS_REVISION open (require sourcing) · 1 PASS (V-8.4)
