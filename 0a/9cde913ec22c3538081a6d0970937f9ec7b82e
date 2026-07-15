@@ -1,0 +1,22 @@
+treatment/TREATMENT_DRAFT_v1.1.md
+  s_09e88b34af47d3::t_80f310453aa68f 4
+  s_09e88b34af47d3::t_d7511bb7bf1aee 59
+treatment/CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL.md
+  s_09e88b34af47d3::t_e5beaa3242298f 140-149
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "0a9cde913ec22c3538081a6d0970937f9ec7b82e",
+  "prompts": {},
+  "sessions": {
+    "s_09e88b34af47d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7c931b5e-1c66-4e0c-9a49-2c0426d610c7",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
