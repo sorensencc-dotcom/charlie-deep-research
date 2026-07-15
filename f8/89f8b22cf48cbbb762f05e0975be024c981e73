@@ -1,0 +1,33 @@
+treatment/CIC_GOVERNANCE_INHERITANCE_MAP_V1.1.md
+  s_09e88b34af47d3::t_cd4ea4f647e2c6 69-70,72-73
+  s_09e88b34af47d3::t_def51abe7551d0 77-78,80-81
+  s_09e88b34af47d3::t_2e0cfc4e102ca2 85-86,88-89
+  s_09e88b34af47d3::t_51c2297b63f870 32
+  s_09e88b34af47d3::t_109d500b8057ec 103,105-107,109,113-114,116
+  s_09e88b34af47d3::t_bfdc30a6d4fcf7 93-94,96-97
+treatment/CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL.md
+  s_09e88b34af47d3::t_2f6173ed8c671b 27
+  s_09e88b34af47d3::t_1a3fe567df3095 40
+  s_09e88b34af47d3::t_4bf5a627c88399 121-124,126
+  s_09e88b34af47d3::t_5a4da3b85d7b52 140,144,148,150
+  s_09e88b34af47d3::t_0744aeffd64435 10-11
+  s_09e88b34af47d3::t_cd0a62d2639546 18
+  s_09e88b34af47d3::t_001d589886e00e 84
+  s_09e88b34af47d3::t_cc237f349024bb 130-131,134-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "f889f8b22cf48cbbb762f05e0975be024c981e73",
+  "prompts": {},
+  "sessions": {
+    "s_09e88b34af47d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7c931b5e-1c66-4e0c-9a49-2c0426d610c7",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
