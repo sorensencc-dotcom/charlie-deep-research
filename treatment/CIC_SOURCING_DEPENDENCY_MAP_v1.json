@@ -1,0 +1,353 @@
+[
+  {
+    "id": "V-1.2a",
+    "beat": "1.2",
+    "claim": "Condition/marginalia of family-held memoir copies",
+    "defect_class": "HOLDINGS_VERIFICATION_GAP",
+    "archival_target": "Family-held collection (no accession/box — private custody, not BFRC)",
+    "expected_resolution_path": "Gather custody record + condition survey of family copies; label as family-held primary artifact pending inspection",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires physical inventory + condition survey before ingestion; asset unregisterable until then"
+  },
+  {
+    "id": "V-1.2b",
+    "beat": "1.2",
+    "claim": "Family photographs/ephemera tucked in memoir pages",
+    "defect_class": "HOLDINGS_VERIFICATION_GAP",
+    "archival_target": "Family-held collection (no accession/box)",
+    "expected_resolution_path": "Produce itemized ephemera inventory with custody + date metadata before any on-screen use",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires manifest with custody/date metadata; unregisterable pre-manifest"
+  },
+  {
+    "id": "V-1.2c",
+    "beat": "1.2",
+    "claim": "Memoir passage read aloud by a descendant",
+    "defect_class": "RIGHTS_CLEARANCE",
+    "archival_target": "Memoir publisher/rights holder (edition record, not BFRC)",
+    "expected_resolution_path": "Confirm memoir reproduction rights + lock passage citation to edition/page before scripting",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires legal rights clearance + citation lock; quoted text cannot propagate into script/VO uncleared"
+  },
+  {
+    "id": "V-1.3",
+    "beat": "1.3",
+    "claim": "Sorensen family entries in 1880s Danish emigration ledgers",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Danish emigration archives (Rigsarkivet or equivalent) — no BFRC box; outside 2026-07-24 visit scope",
+    "expected_resolution_path": "Retrieve exact ledger entry (archive name, folio, date); cite. If absent, restate as representative not specific",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited primary ledger entry; else beat must downgrade to representative framing"
+  },
+  {
+    "id": "V-2.1",
+    "beat": "2.1",
+    "claim": "Emigration records, ship manifest, exact departure year",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Danish/immigration archives — no BFRC box; outside 2026-07-24 visit scope",
+    "expected_resolution_path": "Source manifest + departure year from Danish/immigration archives; cite record ID",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited manifest/record ID; S2 dates remain provisional until resolved"
+  },
+  {
+    "id": "V-2.4",
+    "beat": "2.4",
+    "claim": "Ford hire \"circa 1905,\" patternmaker role",
+    "defect_class": "TIMELINE_NODE_IMPRECISION",
+    "archival_target": "Acc. 823, Box 4 (P.E. Martin papers, correspondence/notebook — scope note: \"In 1908, Charles Sorensen became Martin's assistant\", conflicts with circa-1905 framing)",
+    "expected_resolution_path": "Confirm exact hiring date + initial title from Ford/Piquette employment records; replace \"circa\" with sourced date",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires exact date + citation; if Acc.823 Box4 conflicts, reconcile 1905 vs 1908 framing before admission"
+  },
+  {
+    "id": "V-3.2",
+    "beat": "3.2",
+    "claim": "1908 Piquette chassis-drag experiment (date/primacy)",
+    "defect_class": "SINGLE_SOURCE_RISK",
+    "archival_target": "Sorensen memoir (in hand) + published dissenting historian accounts — no BFRC box assigned",
+    "expected_resolution_path": "Present as contested; cite memoir AND >=1 dissenting historian per R2 skepticism rule; do not assert as settled",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS (contested-tag admissible) once memoir + >=1 dissenting citation both on record; cannot be presented as settled fact"
+  },
+  {
+    "id": "V-3.4a",
+    "beat": "3.4",
+    "claim": "Five-dollar day wage-and-control duality, domestic scope only",
+    "defect_class": "PASS (SPEC_NONCONFORMANCE cleared 2026-07-14)",
+    "archival_target": "N/A — registry-admitted",
+    "expected_resolution_path": "None required; re-verification confirmed wording matches locked clause verbatim",
+    "registry_transition_rule": "PASS — already registry-ready; no further transition needed"
+  },
+  {
+    "id": "V-3.5",
+    "beat": "3.5",
+    "claim": "1913-14 press crediting Ford alone for the assembly line (\"first theft\")",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Detroit Free Press / Detroit News archives, 1913-14 (microfilm/ProQuest) — no BFRC box assigned",
+    "expected_resolution_path": "Pull dated 1913-14 press items; cite publication + date to substantiate \"first theft\"",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires at least one dated, cited 1913-14 press clipping crediting Ford alone"
+  },
+  {
+    "id": "V-4.2",
+    "beat": "4.2",
+    "claim": "~$50M V-8 monoblock retooling bet",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Acc. 6, Box 156 or 157 (Edsel Ford Papers, \"C.E. Sorensen, production totals,\" 1941-dated section) — bonus lead, not primary financial ledger; primary Ford financial records target not yet identified",
+    "expected_resolution_path": "Confirm $50M against primary Ford financial records; cite. Flag as memoir-derived until then",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires primary financial-record citation; keystone figure (logline + S4 table) stays flagged memoir-derived until resolved"
+  },
+  {
+    "id": "V-4.3",
+    "beat": "4.3",
+    "claim": "Foundry scrap rates, failure timeline, \"3,000 engines/day\"",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Acc. 6, Box 156 or 157 (Edsel Ford Papers, production totals, 1941-dated section) — bonus lead; primary Rouge foundry records target not yet identified",
+    "expected_resolution_path": "Source scrap/failure data + production rate from foundry records; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited foundry production/scrap-rate record"
+  },
+  {
+    "id": "V-4.4",
+    "beat": "4.4",
+    "claim": "Service Department scale/composition (ex-boxers, ex-convicts, informers)",
+    "defect_class": "SINGLE_SOURCE_RISK",
+    "archival_target": "No BFRC box currently assigned; candidate collections likely adjacent to Acc. 285 Box 2673 (\"H.H. Bennett's Office\" folder) but not yet targeted for this specific claim",
+    "expected_resolution_path": "Source Service Dept scale from non-memoir record; retain as antagonist seed per R3, cited",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS (or contested-tag) requires non-memoir corroboration of scale/composition; else retains single-source tag"
+  },
+  {
+    "id": "V-4.5a",
+    "beat": "4.5",
+    "claim": "Sorensen's Ford-of-Europe oversight scope/dates (Dagenham, Cologne)",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Acc. 6, Box 128 (Edsel Ford Papers, \"Charles Sorensen comment on Dagenham meeting,\" SU-SP folder)",
+    "expected_resolution_path": "Confirm oversight role scope + dates from Ford-of-Europe records; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited scope/date confirmation from Box 128 or equivalent Ford-of-Europe record"
+  },
+  {
+    "id": "V-4.5b",
+    "beat": "4.5",
+    "claim": "Soviet technical-assistance contracts; German industrial adoption of Fordism",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "External national/industrial archives (Soviet/German) — no BFRC box; not in 2026-07-24 visit scope",
+    "expected_resolution_path": "Source specific Soviet contract + German adoption citations; keep brief/factual per S5, avoid R4 over-tangent",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires at least one cited contract/adoption record; must stay brief per section-risk guard"
+  },
+  {
+    "id": "V-5.2a",
+    "beat": "5.2",
+    "claim": "Willow Run \"largest single industrial building in the world under one roof\"",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Wartime construction records — no BFRC box assigned",
+    "expected_resolution_path": "Confirm superlative against wartime construction records; else restate as \"among the largest\"",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited construction-record confirmation; else must soften to non-absolute phrasing"
+  },
+  {
+    "id": "V-5.2b",
+    "beat": "5.2",
+    "claim": "B-24 Liberator has over 400,000 parts",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "AAF production records / Consolidated Aircraft archives — no BFRC box assigned",
+    "expected_resolution_path": "Adopt one sourced parts-count with citation; note variance range",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires one cited parts-count figure with variance noted"
+  },
+  {
+    "id": "V-5.3",
+    "beat": "5.3",
+    "claim": "Overnight San Diego hotel-room sketch of Willow Run (MIDPOINT keystone)",
+    "defect_class": "SINGLE_SOURCE_RISK (keystone)",
+    "archival_target": "Acc. 6, Box 165 (Edsel Ford Papers, independent, strongest candidate); Acc. 38, Box 106 (1946 Simonds manuscript, independent authorship); background: Acc. 38 Box 89, Acc. 65 Box 67, Acc. 796 Box 1, Acc. 285 Box 2607 (all confirmed via BFRC finding aids, none physically reviewed)",
+    "expected_resolution_path": "Seek corroboration; if none, present as memoir-attributed per R2 visible-skepticism rule; do not assert as fact",
+    "registry_transition_rule": "BLOCKED -> CONTESTED requires >=1 source meeting contested-tag bar (independent doc/eyewitness/consistent contemporary record); BLOCKED -> ADMITTED requires independent primary/secondary confirmation per sourcing packet V-5.3 S3; no qualifying source after full sweep escalates to Tier 1 for retain/reframe/cut decision"
+  },
+  {
+    "id": "V-5.4a",
+    "beat": "5.4",
+    "claim": "Press coinage \"Willit Run?\"",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Contemporary press archives (Detroit Free Press/Detroit News) — no BFRC box assigned",
+    "expected_resolution_path": "Source coinage attribution + first print appearance; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited attribution + first-print date"
+  },
+  {
+    "id": "V-5.4b",
+    "beat": "5.4",
+    "claim": "Lindbergh diary passages on Willow Run dysfunction",
+    "defect_class": "RIGHTS_CLEARANCE",
+    "archival_target": "Charles A. Lindbergh Papers (Sterling Memorial Library, Yale) — not BFRC",
+    "expected_resolution_path": "Clear rights + cite specific diary passages (date/page)",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires rights clearance + page-level citation before quotation can propagate to script/VO"
+  },
+  {
+    "id": "V-5.5",
+    "beat": "5.5",
+    "claim": "\"B-24 every 63 minutes\" throughput figure",
+    "defect_class": "TEMPORAL_INTEGRITY",
+    "archival_target": "N/A — editorial correction, not archival retrieval (figure is documented at 1944 peak, outside S5's 1941-43 span)",
+    "expected_resolution_path": "Add on-screen date qualifier (1944 peak) OR rescope S5 boundary note; prevent false 1943 attribution",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires an explicit date qualifier on the figure; logline + S4 table must inherit the same qualifier"
+  },
+  {
+    "id": "V-6.1",
+    "beat": "6.1",
+    "claim": "Sorensen acted against Edsel's initiatives, sided with Henry against him",
+    "defect_class": "SINGLE_SOURCE_RISK",
+    "archival_target": "Acc. 6 (Edsel B. Ford Papers, general) — specific episode-level box not yet identified beyond Box 165/128/156-157 (site/production-focused, not conflict-focused)",
+    "expected_resolution_path": "Document specific episodes from non-memoir sources; cite to support culpability (not martyrdom)",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires >=1 non-memoir documented episode; without it, culpability framing stays single-source tagged"
+  },
+  {
+    "id": "V-6.2a",
+    "beat": "6.2",
+    "claim": "Henry Ford's cognitive decline (strokes), extent and dating",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Medical/biographical records — no BFRC box currently assigned; not part of 2026-07-24 visit",
+    "expected_resolution_path": "Source decline extent + dating from medical/biographical record; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited medical/biographical record; pending archival confirmation, follow-up sourcing pass required beyond current visit"
+  },
+  {
+    "id": "V-6.2b",
+    "beat": "6.2",
+    "claim": "Service Dept dismissals \"by men with pistols under their coats\"",
+    "defect_class": "SINGLE_SOURCE_RISK",
+    "archival_target": "No BFRC box currently assigned",
+    "expected_resolution_path": "Source specific dismissal episodes; cite per R3 realized-antagonist requirement",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited specific dismissal episode(s); else retains unsourced tag"
+  },
+  {
+    "id": "V-6.3",
+    "beat": "6.3",
+    "claim": "Federal takeover/intervention contemplation; War Dept correspondence",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "NARA RG 18 / RG 342 (College Park, MD); FDR Presidential Library, Hyde Park, NY — no BFRC box; requires separate research trip, not covered by 2026-07-24 visit",
+    "expected_resolution_path": "Source precise federal options + correspondence; cite; note where literature diverges",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited War Dept/FDR Library correspondence; pending archival confirmation via separate trip"
+  },
+  {
+    "id": "V-6.4",
+    "beat": "6.4",
+    "claim": "HFII's 1943 Navy release and the lobbying behind it",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Navy personnel/service records; HFII papers — no BFRC box in 2026-07-24 list; cross-linked to V-6.5",
+    "expected_resolution_path": "Document HFII release circumstances + lobbying; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited release record; cross-linked to V-6.5 outcome per Remediation Plan S1 -- do not resolve independently"
+  },
+  {
+    "id": "V-6.5",
+    "beat": "6.5",
+    "claim": "1944 forced-exit mechanics (Miami phone call, Bennett's role)",
+    "defect_class": "SINGLE_SOURCE_RISK (keystone)",
+    "archival_target": "Acc. SE-007, Box 47 (Frank Campsall Records — Ford's own secretary, independent, best candidate); Acc. 285, Box 2673 (H.H. Bennett's Office folder, independent); fallback: Acc. 65 Box 69 (\"Diary Notes 1940-1944,\" Sorensen's own voice, p.912 passage likely here); Acc. 13 Box 20 (\"Sorenson, C.E. 1942-1944\" engineering-library clippings, independent compilation); external: Harry Bennett memoir (opposing interested witness, triangulation only)",
+    "expected_resolution_path": "Corroborate exit sequence/causes from non-memoir sources; present as open per R2 until resolved",
+    "registry_transition_rule": "BLOCKED -> CONTESTED requires Bennett-memoir or event-confirms-not-cause press; BLOCKED -> ADMITTED requires independent (non-Sorensen, non-Bennett) corroboration of both timeline AND causal mechanism per sourcing packet V-6.5 S3; V-6.4/V-6.6 remain gated on this packet's outcome; no qualifying source escalates to Tier 1"
+  },
+  {
+    "id": "V-6.6",
+    "beat": "6.6",
+    "claim": "HFII's \"You're through\" wording to Bennett, Sept 1945",
+    "defect_class": "SINGLE_SOURCE_RISK",
+    "archival_target": "Participant recollections (Logan Miller oral history, Benson Ford / Ford Archives — partially quoted already, full transcript not yet pulled); no specific box in final 2026-07-24 list",
+    "expected_resolution_path": "Source wording + attribution; present as recollected, cite participants",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS (or contested-tag) requires cited participant source for wording; cross-linked to V-6.5, do not resolve independently"
+  },
+  {
+    "id": "V-7.1",
+    "beat": "7.1",
+    "claim": "Willys titles/dates (1944 presidency through vice-chairmanship)",
+    "defect_class": "TIMELINE_NODE_IMPRECISION",
+    "archival_target": "Willys-Overland corporate records — no BFRC box assigned",
+    "expected_resolution_path": "Confirm exact Willys titles + dates; cite corporate records",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited corporate-record date/title confirmation"
+  },
+  {
+    "id": "V-7.2",
+    "beat": "7.2",
+    "claim": "CESOR Farm demonstration footage/photographs",
+    "defect_class": "HOLDINGS_VERIFICATION_GAP",
+    "archival_target": "Family-held collection (no accession/box — likely archival exclusive per packet)",
+    "expected_resolution_path": "Inventory + condition-survey CESOR assets; register custody before exclusive claim",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires physical inventory/condition survey before registration; exclusive claim withheld until registered"
+  },
+  {
+    "id": "V-7.3a",
+    "beat": "7.3",
+    "claim": "Yacht Helene ownership/dates",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Vessel registry records (Coast Guard/maritime records) — no BFRC box",
+    "expected_resolution_path": "Confirm vessel registry + ownership dates; cite",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited vessel-registry record"
+  },
+  {
+    "id": "V-7.3b",
+    "beat": "7.3",
+    "claim": "Cuban estate + Virgin Islands property acquisition/scale/operations",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Estate/land records (Cuba, US Virgin Islands) — no BFRC box",
+    "expected_resolution_path": "Source acquisition dates + scale + operations from land/estate records; cite. Frame as systemic per S5",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited land/estate record; expropriation setup (S5) stays unsupported until sourced"
+  },
+  {
+    "id": "V-7.4",
+    "beat": "7.4",
+    "claim": "1959 Castro expropriation of Sorensen's Cuban estate (S5 emotional keystone)",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Cuban government/expropriation records; US State Dept claims records — no BFRC box; open research question",
+    "expected_resolution_path": "Source expropriation records + specific property fate; cite. Do not assert specific fate until confirmed",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited expropriation record confirming specific property fate; highest-weight geo node stays open until resolved"
+  },
+  {
+    "id": "V-7.5",
+    "beat": "7.5",
+    "claim": "Memoir published 1956; Samuel T. Williamson collaboration credit",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Publisher/edition record (bibliographic, not BFRC)",
+    "expected_resolution_path": "Confirm pub date + Williamson credit against edition; cite. Retain source+exhibit framing per R2",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited edition record; bibliographic fact propagates to S1/S8 memoir references once resolved"
+  },
+  {
+    "id": "V-8.1a",
+    "beat": "8.1",
+    "claim": "Death: August 1968, Bethesda, Maryland",
+    "defect_class": "PRIMARY_RECORD_GAP",
+    "archival_target": "Maryland vital/death records — no BFRC box",
+    "expected_resolution_path": "Confirm date + place against death record; cite. Hold specifics as provisional until confirmed",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires cited death record; terminal-timeline node stays provisional until then"
+  },
+  {
+    "id": "V-8.1b",
+    "beat": "8.1",
+    "claim": "Obituary brevity/framing (\"aide,\" \"lieutenant\")",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Newspaper obituary archives, 1968 — no BFRC box assigned",
+    "expected_resolution_path": "Pull actual obituaries; cite lengths/framings. Brevity thesis unsupported until clippings in hand",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires actual cited clippings supporting the brevity thesis"
+  },
+  {
+    "id": "V-8.1c",
+    "beat": "8.1",
+    "claim": "\"A name misspelled somewhere\" in the obituary coverage",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Same as V-8.1b — newspaper obituary archives, 1968; no source exists for this instance yet",
+    "expected_resolution_path": "Convert prose to conditional; assert misspelling only after a located, cited instance; else remove",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires a located, cited misspelling instance; else claim must be removed, not just softened"
+  },
+  {
+    "id": "V-8.2",
+    "beat": "8.2",
+    "claim": "Toyota Production System lineage to Ford methods",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Secondary literature (TPS/Toyota historical scholarship) — not archival box",
+    "expected_resolution_path": "Source TPS->Ford-method lineage precisely; cite. Avoid over-claim of direct derivation",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires precise cited lineage source; must avoid overstated direct-derivation claim"
+  },
+  {
+    "id": "V-8.3",
+    "beat": "8.3",
+    "claim": "Absence of Danish commemoration (\"no square, no bust, no schoolbook page\")",
+    "defect_class": "PROVENANCE_GAP",
+    "archival_target": "N/A — pending 2026 Copenhagen shoot, not a document retrieval",
+    "expected_resolution_path": "Restate as pending 2026-shoot finding; report what is found, not the structure's preferred null result (S8 R5 false-resolution guard)",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS requires the 2026 shoot to occur and the finding (positive or null) to be reported as captured, not pre-asserted"
+  },
+  {
+    "id": "V-8.4",
+    "beat": "8.4",
+    "claim": "Verite custodian moment, memoir passed hand to hand in Copenhagen",
+    "defect_class": "PASS",
+    "archival_target": "N/A — registry-admitted; primary-capture asset registers post-shoot",
+    "expected_resolution_path": "None required; explicitly contingent on 2026 shoot, no unverified fact pre-asserted",
+    "registry_transition_rule": "PASS — already registry-ready; asset formally registers once 2026 footage is captured"
+  }
+]
