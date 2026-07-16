@@ -47,3 +47,4 @@ Beat 5.3 (midpoint). Sorensen's overnight San Diego hotel-room sketch of the Wil
 | Date | Action | Result |
 |---|---|---|
 | 2026-07-16 | Packet opened | Not yet dispatched |
+| 2026-07-16 | Public web sweep (2 queries: "hotel room sketch San Diego 1941 B-24", general corroboration search) | No hits. Results returned general Willow Run plant history and San Diego local-history archives only — nothing referencing the specific sketch, insomnia, or the breakfast throughput commitment. Status remains BLOCKED. Physical archive pull (Benson Ford Acc. 65 Box 66, NARA RG 18/342, Consolidated/Convair archives) still required — not achievable via public web search. |
