@@ -1,0 +1,19 @@
+treatment/CIC_ARRIVAL_DAY_CHECKLIST_2026-07-24.md
+  s_69d32939a05217::t_49bff6db5d68b5 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "98a369a7fcc39db73eecec361a32f91e4ce49e59",
+  "prompts": {},
+  "sessions": {
+    "s_69d32939a05217": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a94ddf1e-dd15-4a83-8dc4-8b6afc5ae859",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
