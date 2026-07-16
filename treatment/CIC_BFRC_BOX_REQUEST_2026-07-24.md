@@ -27,7 +27,8 @@ supersedes both prior drafts (speculative Tier 2/3 guesses, and the unverified u
 | — | Acc. 6 | Edsel B. Ford Papers (new finds, same accession) | **128** | "Charles Sorensen comment on Dagenham meeting" (SU-SP folder) | **NEW — CONFIRMED** | Supports V-4.5a (Ford-of-Europe oversight) — not a keystone item, bonus if slots allow |
 | — | Acc. 6 | Edsel B. Ford Papers (new finds, same accession) | **156/157** | "C.E. Sorensen, production totals" (SN-SP folder, 1941-dated section) | **NEW — CONFIRMED** | Supports V-4.2/V-4.3 (production figures) — bonus if slots allow |
 | 14 | Acc. SE-007 | Frank Campsall Records Series, "Henry Ford Office records / Personal topics subject file subgroup" | **47** (refined from "Sorensen folder") | "Frank Campsall / Correspondence — C.E. Sorensen fired, 1944 / Codicil to Henry Ford's will, 1944 / Telephone notes, 1944" | **CONFIRMED, exact match, box refined**. Scope note independently states: "bits of information relating to Ford's firing of C.E. Sorensen, a codicil to Ford's will (1944)" | V-6.5 — **best candidate on the whole list**: Campsall was Ford's own secretary, independent of both Sorensen and Bennett, directly on the causal mechanism |
-| 15 | Acc. 823 | ~~"P.E. Martin Papers, 1880–1943"~~ | 1 | **No finding aid located under this accession number** across two targeted searches | **UNVERIFIED / LIKELY WRONG ACCESSION NUMBER** | Drop from list pending confirmation with BFRC reference desk |
+| 15 | Acc. 823 | P.E. Martin papers, 1880–1943 (bulk 1921–1942) | 3 (Albums), 4 (Papers) | **CORRECTION, 2026-07-16: reinstated.** Earlier "dropped" call was wrong — my initial searches (filename-guessing, Small Accessions PDF text search) missed it; found via `xtf/search?keyword=sorensen` directly. Scope note: "In 1908, Charles Sorensen became Martin's assistant" (differs from Treatment's "circa 1905" framing — worth checking). Box 3: "Martin, Sorensen and other executives, 1939" photo album. Box 4: correspondence, production totals, Martin's personal notebook | **CONFIRMED, reinstated** | V-2.4 — direct relevance: independent record bearing on the exact hire-date/title question the packet already flags |
+| 16 | Acc. 13 | Engineering Library Vertical File for Henry Ford Collection, 1870–1945 | 20 | Folder titled **"Sorenson, C.E., 1942-1944"** — Ford's own engineering library newspaper-clippings file, independent compilation, covering exactly the exit window | **NEW — CONFIRMED** | V-6.5 — new candidate: independent of Sorensen, Bennett, and Campsall; may contain contemporary press beyond what's already cited in Treatment v13 |
 
 ## Revised final submission (15-box cap, corrected)
 
@@ -50,9 +51,13 @@ That's 9 confirmed, high-value boxes — 6 slots remain under the 15 cap. Recomm
 11. Acc. 65, Box 68 — "Philosophical Comments on Manufacturing," "Rouge Expansion" (context)
 12. Acc. 6, Box 128 — Dagenham comment (V-4.5a, bonus, new find)
 13. Acc. 6, Box 156 or 157 — production totals (V-4.2/V-4.3, bonus, new find)
-14–15. Reserve — confirm Acc. 833 (photos, rows 8-10) and Acc. 823 (P.E. Martin — possibly wrong
-number) with BFRC reference desk before the visit; substitute in whichever resolves, or leave
-open for on-site discovery.
+14. Acc. 823, Box 4 — Martin papers, correspondence/production totals/notebook (V-2.4, reinstated per correction above)
+15. Acc. 13, Box 20 — "Sorenson, C.E., 1942-1944" clippings file (V-6.5, new independent lead)
+
+That's 15 confirmed boxes at the daily cap. Acc. 833 (photos, rows 8-10) and Acc. 823 Box 3
+(the 1939 photo album) did not make the final 15 — both are visual-only or lower-priority
+relative to the textual leads above. If you want the photo corroboration too, this is now a
+16-17 item list and something needs to be cut, or plan a follow-up visit.
 
 ## Known gap
 
@@ -65,4 +70,6 @@ refinement; no separate follow-up visit needed for that specific citation.
 - [ ] Update CIC_SOURCING_PACKET_V-5.3.md Work Log with findings from boxes 1, 2, 3, 5, 6, 8 above
 - [ ] Update CIC_SOURCING_PACKET_V-6.5.md Work Log with findings from boxes 4, 7, 9 above
 - [ ] Run status transition per each packet's §3/§4 admission criteria (BLOCKED → CONTESTED or ADMITTED)
-- [ ] Confirm Acc. 833 box numbers and Acc. 823 accession number with BFRC reference desk before finalizing slots 14-15
+- [x] Acc. 833 confirmed valid by Chris via direct catalog check, 2026-07-16 — fetched actual PDF (833_GeneralPhotographsSeries.pdf) afterward and found only 1 Sorensen/Sorenson reference in the whole document (Box 4, unrelated branch-photo folder) — did not make final 15, see note above
+- [x] Acc. 823 — CORRECTION: reinstated 2026-07-16, was wrongly dropped earlier the same day. Found via `xtf/search?keyword=sorensen`. Now in final 15 (Box 4)
+- [x] Acc. 13 added 2026-07-16 — new find via the same keyword search, Box 20 ("Sorenson, C.E., 1942-1944" clippings), now in final 15
