@@ -1,0 +1,49 @@
+# CIC_SOURCING_PACKET_V-5.3 — Willow Run Genesis (Hotel-Room Sketch)
+
+STATUS: OPEN
+Tagged to: CIC_REMEDIATION_PLAN_v1.md (LOCKED) → CIC_ARCHIVAL_VERIFICATION_CONSOLIDATED_V1.1_FINAL.md (re-verified 2026-07-14)
+Registry status: BLOCKED (NEEDS_REVISION, SINGLE_SOURCE_RISK, keystone)
+
+## 1. Claim Under Verification
+
+Beat 5.3 (midpoint). Sorensen's overnight San Diego hotel-room sketch of the Willow Run plant floor plan, the insomnia that produced it, and the "one per hour" throughput demand he set the next morning at breakfast with Edsel Ford. Currently sourced only to Sorensen's own memoir (*My Forty Years with Ford*) — an interested-witness account of the film's centerpiece scene.
+
+## 2. Archives / Collections to Hit
+
+| Collection | What to look for |
+|---|---|
+| Benson Ford Research Center, Dearborn, MI (Acc. 65) | Sorensen interview transcripts (Box 66) for any independent retelling with added detail/dates; internal Ford correspondence re: B-24 contract timing, early 1941 |
+| Consolidated Aircraft / Convair records (San Diego Air & Space Museum archives) | Any documentation of Sorensen's 1941 plant visit, dates, personnel present |
+| Army Air Forces production records (National Archives, College Park, MD — RG 18, RG 342) | Contract award documentation for Ford B-24 production; design-freeze correspondence; any AAF memo referencing the Ford floor-plan proposal or its origin |
+| Willow Run Plant Data bulletins (Henry Ford Museum / Benson Ford) | Early bulletins (1941) that might reference plant design origin |
+| Fortune magazine archive | April 1942 "Sorensen of the Rouge" profile — check for any independent account of the sketch, even secondhand |
+| Detroit Free Press / Detroit News archives (microfilm or ProQuest) | Contemporary 1941 coverage of Ford's B-24 contract announcement — may corroborate or omit the sketch story |
+| Albert Kahn Associates archives (if extant) | Correspondence on translating Sorensen's sketch into architectural drawings — would corroborate a real document existed |
+| Henry Ford II / Benson Ford recollections | Both are reported to have "initialled the sketch on the spot" per memoir — check their personal papers/interviews for independent confirmation of that moment |
+
+## 3. Admission Criteria
+
+**ADMITTED (independent primary/secondary):**
+- A document, letter, or dated record — not authored by Sorensen — that references the sketch, the San Diego trip, or the specific throughput commitment, OR
+- A named eyewitness account (Edsel Ford, HFII, Benson Ford, Kahn associates) corroborating the event independently of Sorensen's memoir, in their own words/records, OR
+- Contemporary (1941-42) press or AAF documentation establishing the timeline that is consistent with and does not contradict the memoir's sequence.
+
+**CONTESTED-TAG only (insufficient for admission):**
+- Later secondary/tertiary sources (post-1956) that merely repeat the memoir without new sourcing.
+- Circumstantial corroboration (e.g., contract was in fact awarded on a floor plan) without any record of *how* the plan originated.
+- Family oral tradition without documentary backing.
+
+**Remains BLOCKED / memoir-conditional:**
+- No corroborating source found. Retain scene as memoir-attributed, explicit on-screen or in narration ("as Sorensen recounted...").
+
+## 4. Status Transition Rules
+
+- BLOCKED → CONTESTED: at least one item meeting the contested-tag bar found; scene retained with explicit single-source framing and citation of the countervailing gap.
+- BLOCKED → ADMITTED: at least one item meeting the admission bar found; scene may be presented without the single-source caveat, still cited.
+- No qualifying source found after full sweep of §2 collections: remains BLOCKED, escalate to Tier 1 for a decision on whether to retain, reframe, or cut the beat.
+
+## 5. Work Log
+
+| Date | Action | Result |
+|---|---|---|
+| 2026-07-16 | Packet opened | Not yet dispatched |
