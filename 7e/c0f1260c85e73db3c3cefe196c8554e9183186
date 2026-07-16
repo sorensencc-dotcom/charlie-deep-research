@@ -1,0 +1,19 @@
+treatment/CIC_BFRC_BOX_REQUEST_2026-07-24.md
+  s_69d32939a05217::t_3e4671f8135e94 1-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "7ec0f1260c85e73db3c3cefe196c8554e9183186",
+  "prompts": {},
+  "sessions": {
+    "s_69d32939a05217": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a94ddf1e-dd15-4a83-8dc4-8b6afc5ae859",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
