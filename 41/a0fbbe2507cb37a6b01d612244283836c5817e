@@ -1,0 +1,19 @@
+treatment/CIC_GOVERNANCE_INHERITANCE_MAP_V1.1.md
+  s_3c3c65fb82be08::t_584cd3a47201bd 3-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "41a0fbbe2507cb37a6b01d612244283836c5817e",
+  "prompts": {},
+  "sessions": {
+    "s_3c3c65fb82be08": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a039efb-4837-4f78-ba71-9dd56431833b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
