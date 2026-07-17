@@ -74,8 +74,9 @@ Per [[feedback_sorensen_sorenson_spelling]], all searches below ran both "Sorens
 - *The Washington Daily News*, March 20, 1943, Image 17: "...Detroit it was Mr. Charles Sorenson, of the Ford company, who has enough money to..."
 
 - *Automotive News* (Detroit, MI), Oct 28, 1940, Image 16: "...C. Miller, Ford; Charles E. Sorenson, Ford; Edsel B. Ford, Ford; William F. Pioch, Ford..." — matches initials, named alongside Edsel Ford.
+- *The Washington Times*, Jan 23, 1937, Image 1: "...station by Charles i E. Sorenson, manager of the Ford Motor Company. Homer Martin, head of..." — same date/event as the *Washington Daily News* Jan 23 1937 hit above (Homer Martin was UAW president; likely a labor-related story covered by two DC outlets same day).
 
-Twelve independent, named, dated press instances spanning 1937-1944 — thoroughly over the admission bar. Convert from speculative to cited fact.
+Thirteen independent, named, dated press instances spanning 1930-1944 — thoroughly over the admission bar. Convert from speculative to cited fact.
 
 **Caution — "Sorenson" is a common Scandinavian surname; keyword search surfaces false positives from unrelated people.** Excluded:
 - *The Madison Daily Leader* (Madison, S.D.), April 10, 1906, Image 3 — "...Sioux river at the old Sorenson ford about three miles northeast of this city..." A river-crossing place name ("Sorenson's ford," a South Dakota geographic feature), not a person. Charles Sorensen was 24 in 1906 and hadn't yet joined Ford (see V-2.4: started mid-1904).
