@@ -95,6 +95,10 @@ Thirteen independent, named, dated press instances spanning 1930-1944 — thorou
 
 **V-8.2 (Toyota TPS lineage):** Web search confirms the Ford→Toyota production-system lineage is a well-established historical claim (Eiji Toyoda's 1950 Rouge plant visit; Taiichi Ohno studying Ford's system as TPS's starting point) — solid, broadly citable, not fringe. However, every source found attributes this to **"Ford's system"** generally, not to **Sorensen by name**. If the treatment's current wording credits Sorensen specifically (not just Ford Motor Co.), that's the actual uncited-assertion gap, not the Ford-Toyota link itself, which doesn't need a citation fight.
 
+## Addendum 2026-07-17 (cont.) — Correct-spelling hits with content relevance beyond V-8.1c
+
+**V-4.5a (Ford-of-Europe oversight dates) — new contemporary citation.** *Evening Star* (Washington, D.C.), July 15, 1930, Image 11 — AP wire story, headline "'RED' FEAR MINIMIZED BY FORD PLANT HEAD." Names him "Charles E. Sorensen, general manager of Europe" (correct spelling this time), addressing fears of communist infiltration/organizing at Ford plants — European context. A contemporary, independent (AP wire, not Sorensen-authored) 1930 source naming his European general-manager title, which helps this item's PRIMARY_RECORD_GAP classification. Full article text small/partially illegible in the scan; not fully transcribed. Same year and general labor-politics context as the Aug 15, 1930 Fish Committee testimony already noted under V-8.1c above (Butler County Press) — worth reading both together if revisited.
+
 ## Next step
 
 None of the above changes any item's BLOCKED/NEEDS_REVISION status per CIC_REMEDIATION_PLAN_v1.md's own admission criteria (same-witness source). Recommend Tier 1 review to decide which items (if any) warrant opening a dedicated CIC_SOURCING_PACKET, following the V-5.3/V-6.5 pattern, and whether V-2.4's "circa 1905" → "mid-1904" correction should be fast-tracked given it's a low-narrative-weight factual date (not a keystone) with a clear same-witness statement.
