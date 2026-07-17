@@ -1,5 +1,25 @@
 # CIC_GOVERNANCE_INHERITANCE_MAP_V1.1
 
+## 0. AUTHORITY SOURCE (added 2026-07-17 — was undocumented)
+
+This repo (`charlie-deep-research`) is a **separate git repository, separate remote**
+(`github.com/sorensencc-dotcom/charlie-deep-research`) from the root project at `c:\dev`. It has
+its own `CLAUDE.md` (BOB diagram-execution mode only — no authority/tier model of its own).
+
+Every doc in this `treatment/` folder that says "Tier 1" (`CIC_REMEDIATION_PLAN_v1.md`,
+`CIC_SOURCING_PACKET_V-5.3.md`, `CIC_SOURCING_PACKET_V-6.5.md`, `SPEC_AMENDMENT_2_S3_A1.md`, etc.)
+is invoking the 3-tier authority model (Tier 1 decides / Tier 2 executes / Tier 3 automates) defined
+in `c:\dev\docs\meta\governance\global-operating-rules-cic-rewrite-labs.md` v2.0. That document's
+own scope line doesn't declare whether it's cross-repo — it has worked here only because the same
+person (Chris Sorensen) holds Tier 1 in both places, not because either repo says so.
+
+**Practical effect, unchanged:** Tier 1 sign-off still means Chris. Nothing about how decisions get
+made changes today.
+
+**Risk this closes:** if root's governance doc is ever amended, or someone else touches this repo,
+there was previously no document here that would surface the dependency. Check both repos' state
+before assuming a "Tier 1" reference in this folder still means what the root doc currently says.
+
 ## 1. GOVERNANCE HEADER
 
 Downstream governance inheritance generated under Spec v1.1 semantics.
