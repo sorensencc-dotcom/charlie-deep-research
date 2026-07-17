@@ -1,0 +1,19 @@
+treatment/CIC_SOURCING_SWEEP_TRANSCRIPT_2026-07-16.md
+  s_3eff2f821192fa::t_19ee423883399d 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "522ed30e1385828f3b6aaa4f4865b34155f55014",
+  "prompts": {},
+  "sessions": {
+    "s_3eff2f821192fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e647d8c9-19b2-4849-95a0-d8ffc0179a13",
+        "model": "unknown"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
