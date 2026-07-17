@@ -1,0 +1,31 @@
+treatment/CIC_SOURCE_LIBRARY.md
+  s_3c3c65fb82be08::t_9e54785f95b474 65-93
+  s_3c3c65fb82be08::t_c8307af234163a 1-64,94-108
+treatment/CIC_SOURCING_PACKET_V-5.3.md
+  s_3c3c65fb82be08::t_54b50a8c1b57d9 60
+  s_3c3c65fb82be08::t_685e38e69f25bb 61
+treatment/CHANGELOG_v1.1.md
+  s_3c3c65fb82be08::t_f7e12a4e122abd 1-47
+treatment/VERSIONING.md
+  s_3c3c65fb82be08::t_9abd518b00a6ce 1-47
+treatment/CastIronCharlie_Treatment_v13_20260523.md
+  s_3c3c65fb82be08::t_28f962b20de368 1-372
+treatment/CIC_SOURCING_PACKET_V-6.5.md
+  s_3c3c65fb82be08::t_60d8c064b03f01 58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "20e2affe8c73b929fe48c65675fd78c3ff026e48",
+  "prompts": {},
+  "sessions": {
+    "s_3c3c65fb82be08": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a039efb-4837-4f78-ba71-9dd56431833b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
