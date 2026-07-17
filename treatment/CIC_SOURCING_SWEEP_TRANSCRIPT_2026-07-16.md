@@ -122,6 +122,16 @@ Running total: roughly 20+ independent dated press instances of "Sorensen"/"Sore
 
 Also two executive-compensation disclosures with concrete figures: *Evening Star*, July 17, 1944, Image 16 — "...Charles E Sorensen, Ford $220,004.96..." (alongside Donaldson Brown, Albert Bradley); and *Evening Star*, June 25, 1945, Image 2 — "...C. E. Sorenson, Ford Co, $230,000..." — this second one is odd since he'd left Ford over a year earlier for Willys-Overland; flagging as unconfirmed/possibly a prior-year disclosure rather than current employment, not citable as-is without reading the full list.
 
+**V-6.3 (federal takeover correspondence) — first lead found; the earlier transcript sweep found nothing on this item.** *Detroit Evening Times* (Night Edition), Oct 1, 1942, Image 1 — front-page headline "ROOSEVELT SECRET VISIT TO DETROIT PLANTS TOLD," naming Edsel Ford, Charles E. Sorenson, and Harry Bennett. A secret presidential visit to Detroit war plants is squarely on-topic for this item's federal-government-involvement claim. Full article not yet read; the same Oct 1-2, 1942 news cycle also produced the Waterbury Democrat "Willow Run is not..." hit and the June 7/Oct 18 1942 Detroit Evening Times Willow Run pieces logged above — worth reading as a set.
+
+**Third V-5.3 "Consolidated" lead — see `CIC_SOURCING_PACKET_V-5.3.md` for full detail:** *Detroit Evening Times* (Night Edition), Jan 9, 1941, Image 6 — "...head of Consolidated Charles E. Sorensen, Ford production manager, is traveling with the Ford party..." Third independent Jan-1941 outlet (with the Evening Star and McAllen Daily Press) linking Sorensen to "Consolidated" — logged directly to the V-5.3 packet as a priority lead.
+
+**Novel find — foreign-language press:** *Svět* ("World," Cleveland, OH — a Czech-language paper), Dec 10, 1921, Image 1. OCR too garbled to transcribe reliably; earliest non-English press coverage found so far. Not yet translated or read.
+
+**Two more false positives:** *The Idaho Republican* (Blackfoot, ID), April 2, 1909 — "John Sorensen of Groveland" in a wedding announcement, unrelated. *Askov American* (Askov, Pine County, MN), March 31, 1938 — "Edwin M. Sorenson" in a Ford V-8 fuel-economy advertisement, a local dealer/salesman name, unrelated.
+
+**Routine confirmations, not separately detailed:** several more 1941-44 Detroit-area hits (Detroit Evening Times, Waterbury Democrat, Imperial Valley Press, Automotive News, Evening Star) continuing the same Willow-Run/wartime-production coverage pattern already established above, plus a second compensation-figure confirmation (*Automotive News*, June 12, 1944: "...Sorensen earned more than $220,000 in 1942, the last..." — matches and clarifies the July 1944 figure as being for calendar year 1942 specifically).
+
 ## Next step
 
 None of the above changes any item's BLOCKED/NEEDS_REVISION status per CIC_REMEDIATION_PLAN_v1.md's own admission criteria (same-witness source). Recommend Tier 1 review to decide which items (if any) warrant opening a dedicated CIC_SOURCING_PACKET, following the V-5.3/V-6.5 pattern, and whether V-2.4's "circa 1905" → "mid-1904" correction should be fast-tracked given it's a low-narrative-weight factual date (not a keystone) with a clear same-witness statement.
