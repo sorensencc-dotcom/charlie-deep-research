@@ -52,6 +52,18 @@ Source document: Acc. 64.167.65, Owen W. Bombard interview series, dictated 1952
 
 OCR quality is source-flagged as "moderately reliable" (p1 disclaimer); spacing/line-break artifacts are heavy in places. Negative results for V-3.5, V-4.3, V-4.4, V-5.2a, V-5.2b, V-5.4a, V-6.2b, V-6.3 could reflect OCR misses rather than confirmed absence — worth a fuzzy-search follow-up if any of these become priority items.
 
+## Addendum 2026-07-17 — Web sweep, V-8.1a/b/c/8.2 (public records, not archive-gated)
+
+Per [[feedback_sorensen_sorenson_spelling]], all searches below ran both "Sorensen" and "Sorenson" spellings.
+
+**V-8.1a (death date/place):** Prior web search surfaced a three-way discrepancy (Aug 11 / Aug 13 / Aug 28, 1968) across secondary sources repeating each other. Find a Grave memorial #134073056 (fetched directly via browser, independent of Sorensen — not same-witness) states definitively: **death 11 Aug 1968, Bethesda, Montgomery County, Maryland**; **burial Woodlawn Park North Cemetery and Mausoleum, Miami, Miami-Dade County, Florida**. Resolves the date discrepancy to a citable secondary source. Still not a primary vital record (death certificate) — the item's PRIMARY_RECORD_GAP classification stands, but this is a stronger secondary anchor than what existed before.
+
+**V-8.1b (obituary brevity thesis):** Confirmed via web search that the *Detroit Times* ran a front-page "SORENSEN QUITS FORD" story in 1944 — his departure, not his 1968 death. Could not retrieve the actual 1968 obituary text or assess its length; NYT archive is paywalled and wasn't accessible via WebFetch/browser in this pass. Unresolved — needs library/ProQuest/NYT-archive access.
+
+**V-8.1c (misspelling instance):** No confirmed instance found. Library of Congress Chronicling America (the right free tool for a full-text historical-newspaper search) returned a Cloudflare bot-verification wall to both a plain WebFetch and a real Playwright-driven browser session — did not clear automatically. Unresolved, needs either a human clicking through the challenge or a different newspaper-archive tool.
+
+**V-8.2 (Toyota TPS lineage):** Web search confirms the Ford→Toyota production-system lineage is a well-established historical claim (Eiji Toyoda's 1950 Rouge plant visit; Taiichi Ohno studying Ford's system as TPS's starting point) — solid, broadly citable, not fringe. However, every source found attributes this to **"Ford's system"** generally, not to **Sorensen by name**. If the treatment's current wording credits Sorensen specifically (not just Ford Motor Co.), that's the actual uncited-assertion gap, not the Ford-Toyota link itself, which doesn't need a citation fight.
+
 ## Next step
 
 None of the above changes any item's BLOCKED/NEEDS_REVISION status per CIC_REMEDIATION_PLAN_v1.md's own admission criteria (same-witness source). Recommend Tier 1 review to decide which items (if any) warrant opening a dedicated CIC_SOURCING_PACKET, following the V-5.3/V-6.5 pattern, and whether V-2.4's "circa 1905" → "mid-1904" correction should be fast-tracked given it's a low-narrative-weight factual date (not a keystone) with a clear same-witness statement.
