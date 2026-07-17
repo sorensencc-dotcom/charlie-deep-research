@@ -1,0 +1,21 @@
+treatment/CIC_SOURCING_PACKET_V-5.3.md
+  s_3eff2f821192fa::t_58148be30673ca 56
+treatment/CIC_SOURCING_SWEEP_TRANSCRIPT_2026-07-16.md
+  s_3eff2f821192fa::t_2f55473d093dbb 125-134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8b8f572df8242cecc64bc513fd7335e1692765fc",
+  "prompts": {},
+  "sessions": {
+    "s_3eff2f821192fa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e647d8c9-19b2-4849-95a0-d8ffc0179a13",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
