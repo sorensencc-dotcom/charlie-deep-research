@@ -1,0 +1,25 @@
+.github/workflows/nightly-validate.yml
+  s_3e5d58d3fdd8c4::t_d7106be727017d 10
+.github/workflows/dashboard.yml
+  s_3e5d58d3fdd8c4::t_d7106be727017d 10
+.github/workflows/bootstrap.yml
+  s_3e5d58d3fdd8c4::t_d7106be727017d 7
+.github/workflows/master-sheet-build.yml
+  s_3e5d58d3fdd8c4::t_d7106be727017d 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "f8d976757233e87db9df381b5ff32da1c378e2b5",
+  "prompts": {},
+  "sessions": {
+    "s_3e5d58d3fdd8c4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f9959fa1-4b91-4a6c-b913-92e744119cfa",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
