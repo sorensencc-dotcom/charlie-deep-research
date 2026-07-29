@@ -1,0 +1,19 @@
+treatment/CIC_SOURCING_DEPENDENCY_MAP_v1.json
+  s_3cb77ca2d954a4::t_ef9daf546650c0 355-356
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "a546a167a574fec62951aeaef9e58e250bea51c3",
+  "prompts": {},
+  "sessions": {
+    "s_3cb77ca2d954a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bfa349d7-255c-4670-b61b-8d21f54dac3b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Chris Sorensen <sorensencc@gmail.com>"
+    }
+  }
+}
