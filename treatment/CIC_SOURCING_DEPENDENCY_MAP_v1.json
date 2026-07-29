@@ -1,4 +1,6 @@
-[
+{
+  "matchSchemaVersion": 1,
+  "items": [
   {
     "id": "V-1.2a",
     "beat": "1.2",
@@ -350,4 +352,5 @@
     "expected_resolution_path": "None required; explicitly contingent on 2026 shoot, no unverified fact pre-asserted",
     "registry_transition_rule": "PASS — already registry-ready; asset formally registers once 2026 footage is captured"
   }
-]
+  ]
+}
