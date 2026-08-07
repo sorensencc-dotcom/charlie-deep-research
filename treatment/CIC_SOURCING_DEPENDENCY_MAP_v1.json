@@ -351,6 +351,51 @@
     "archival_target": "N/A — registry-admitted; primary-capture asset registers post-shoot",
     "expected_resolution_path": "None required; explicitly contingent on 2026 shoot, no unverified fact pre-asserted",
     "registry_transition_rule": "PASS — already registry-ready; asset formally registers once 2026 footage is captured"
+  },
+  {
+    "id": "V-7.1",
+    "beat": "5.3",
+    "claim": "M/Y Helene yacht origin (trm-vault FCT-093, SRC-474) vs. existing San Diego hotel-room sketch account (V-5.3 keystone)",
+    "defect_class": "SINGLE_SOURCE_RISK (keystone conflict)",
+    "archival_target": "SRC-474 own sourcing not yet identified (internal research compilation, no citation trail pulled); otherwise same BFRC targets as V-5.3",
+    "expected_resolution_path": "Identify SRC-474's underlying source for the yacht claim before treating as independent corroboration or a competing scene candidate; cross-linked to V-5.3, do not resolve independently",
+    "registry_transition_rule": "BLOCKED, gated on V-5.3. Escalate to Tier 1 per CIC_SOURCING_PACKET_V-7.md §1 before any 5.3 prose change"
+  },
+  {
+    "id": "V-7.2",
+    "beat": "5.2",
+    "claim": "Willow Run largest-building superlative + dimensions (trm-vault FCT-100, FCT-081, SRC-473/474)",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Same as V-5.2a — wartime construction records, no BFRC box assigned",
+    "expected_resolution_path": "Two independent secondary sources now agree on superlative + dimensions; still not primary. See CIC_SOURCING_PACKET_V-7.md §2",
+    "registry_transition_rule": "UNCITED_ASSERTION -> CONTESTED-TAG (2-source secondary agreement met); CONTESTED-TAG -> PASS still requires primary construction-record citation per V-5.2a"
+  },
+  {
+    "id": "V-7.3",
+    "beat": "5.2",
+    "claim": "B-24 parts count conflict (trm-vault FCT-086: 450K parts/360K rivets; FCT-046: 488,193 parts/30K components; both vs. Draft's \"over 400,000\")",
+    "defect_class": "UNCITED_ASSERTION (conflicting figures)",
+    "archival_target": "Same as V-5.2b — AAF production records / Consolidated Aircraft archives, no BFRC box assigned",
+    "expected_resolution_path": "Do not average or pick a new secondary figure; the conflict itself is the finding. Requires one primary aircraft-spec source per V-5.2b",
+    "registry_transition_rule": "NEEDS_REVISION -> PASS unchanged from V-5.2b; new facts widen rather than close the variance range"
+  },
+  {
+    "id": "V-7.4",
+    "beat": "5.4",
+    "claim": "\"Willit Run\" / \"Will-It-Run\" coinage, 2-source secondary corroboration (trm-vault FCT-054, FCT-107)",
+    "defect_class": "UNCITED_ASSERTION",
+    "archival_target": "Same as V-5.4a — contemporary press archives, no BFRC box assigned",
+    "expected_resolution_path": "Phrase existence now corroborated by 2 independent secondary sources; first-print date/byline still unsourced",
+    "registry_transition_rule": "UNCITED_ASSERTION -> CONTESTED-TAG (phrase existence, 2-source secondary agreement); CONTESTED-TAG -> PASS still requires cited first-print attribution per V-5.4a"
+  },
+  {
+    "id": "V-7.5",
+    "beat": "5.5",
+    "claim": "63-minute B-24 rate reconfirmed as 1944 peak figure (trm-vault FCT-056, FCT-103)",
+    "defect_class": "TEMPORAL_INTEGRITY",
+    "archival_target": "N/A — confirms existing V-5.5 date-qualifier framing is correct, no new archival need",
+    "expected_resolution_path": "No action required; two independent secondary sources both scope the 63-minute figure to 1944 peak, matching the existing on-screen forward-reference caveat",
+    "registry_transition_rule": "No status change to V-5.5; this entry is corroborative only"
   }
   ]
 }
