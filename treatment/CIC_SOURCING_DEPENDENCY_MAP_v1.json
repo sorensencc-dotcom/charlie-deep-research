@@ -356,10 +356,10 @@
     "id": "V-7.1",
     "beat": "5.3",
     "claim": "M/Y Helene yacht origin (trm-vault FCT-093, SRC-474) vs. existing San Diego hotel-room sketch account (V-5.3 keystone)",
-    "defect_class": "SINGLE_SOURCE_RISK (keystone conflict)",
-    "archival_target": "SRC-474 own sourcing not yet identified (internal research compilation, no citation trail pulled); otherwise same BFRC targets as V-5.3",
-    "expected_resolution_path": "Identify SRC-474's underlying source for the yacht claim before treating as independent corroboration or a competing scene candidate; cross-linked to V-5.3, do not resolve independently",
-    "registry_transition_rule": "BLOCKED, gated on V-5.3. Escalate to Tier 1 per CIC_SOURCING_PACKET_V-7.md §1 before any 5.3 prose change"
+    "defect_class": "SINGLE_SOURCE_RISK (same memoir, conflicting secondary paraphrases)",
+    "archival_target": "SRC-474 raw text checked directly (2026-08-08) — self-cites the yacht claim to Sorensen's 1956 memoir, same source as V-5.3, not an independent source. Same BFRC targets as V-5.3 apply (Acc. 6 Box 165, Acc. 38 Box 106, background boxes)",
+    "expected_resolution_path": "Pull the memoir's own text for this passage (page ref not yet identified) and confirm whether it states hotel room, yacht, or both at different points; do not resolve from either working-notes paraphrase",
+    "registry_transition_rule": "BLOCKED, gated on V-5.3. Narrowed to a single memoir-text lookup per CIC_SOURCING_PACKET_V-7.md §1 (2026-08-08 update); neither framing may harden into settled fact until the memoir passage itself is checked"
   },
   {
     "id": "V-7.2",
