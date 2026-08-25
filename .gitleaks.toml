@@ -1,0 +1,4 @@
+title = "charlie-deep-research gitleaks config"
+
+[extend]
+useDefault = true

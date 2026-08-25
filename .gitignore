@@ -10,9 +10,15 @@ yarn-error.log*
 # Environment files
 .env
 .env.local
+.env.*.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Secrets / key material
+*.pem
+*.key
+secrets/
 
 # -------------------------
 # PYTHON / VENV
