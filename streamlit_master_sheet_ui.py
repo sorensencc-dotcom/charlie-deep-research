@@ -28,12 +28,13 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;800&display=swap');
 
     :root {
-      --forge: #1a1410;
-      --iron: #2c2420;
+      /* CIC Industrial Design System — only approved palette tokens */
+      --forge: #1A1410;
+      --iron: #2C2420;
       --brass: #B8922A;
       --ember: #C4501A;
-      --ash: #9a9088;
-      --bone: #e8e0d4;
+      --ash: #9A9088;
+      --bone: #E8E0D4;
     }
 
     body {
@@ -72,7 +73,7 @@ st.markdown("""
     }
 
     .stButton > button:hover {
-        background-color: #d45a23 !important;
+        background-color: var(--brass) !important;
     }
 
     .diagram-tile {
@@ -86,7 +87,7 @@ st.markdown("""
 
     .diagram-tile:hover {
         border-color: var(--ember);
-        box-shadow: 0 0 8px rgba(196, 80, 26, 0.3);
+        /* no drop shadows per CIC Industrial Design System */
     }
 
     .diagram-tile.active {

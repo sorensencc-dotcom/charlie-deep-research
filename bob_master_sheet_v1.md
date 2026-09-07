@@ -60,6 +60,8 @@ Centered above each row. No dividers.
 - Barlow Condensed for labels
 - Libre Baskerville for subtext
 - CIC crest watermark bottom-right (opacity 0.22)
+- No drop shadows, no gradients, no rounded corners
+- Do not invent new colors, fonts, or styles (see `cic_design_system.md`)
 
 ## Scaling Rules
 - Each diagram scaled to same visual weight

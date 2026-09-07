@@ -11,12 +11,14 @@ This directory contains the eight canonical CIC Industrial‑style diagrams:
 7. Control Plane Internal Routing
 8. Telemetry & Observability
 
-Each diagram follows the CIC Industrial Design System:
+Each diagram follows the **CIC Industrial Design System** (source of truth: [`../cic_design_system.md`](../cic_design_system.md); author checklist: [`../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md`](../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md)):
 
-- Forge black background
-- Brass grid and strokes
-- Ember nodes
+- Forge black background `#1A1410`
+- Brass grid `#2C2420` and strokes `#B8922A`
+- Ember nodes `#C4501A`
 - Playfair / Barlow / Baskerville typography
+- CIC crest watermark bottom-right at opacity 0.22
+- No drop shadows, gradients, or rounded corners
 
 ## Master Sheets
 

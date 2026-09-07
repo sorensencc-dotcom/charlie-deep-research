@@ -14,18 +14,17 @@ st.markdown("""
 
     /* Design System Vars */
     :root {
-      --black: #0a0806;
-      --forge: #1a1410;
-      --iron: #2c2420;
-      --rust: #8B3A1A;
+      /* CIC Industrial Design System — only approved palette tokens */
+      --forge: #1A1410;
+      --iron: #2C2420;
       --ember: #C4501A;
       --brass: #B8922A;
-      --ash: #9a9088;
-      --bone: #e8e0d4;
+      --ash: #9A9088;
+      --bone: #E8E0D4;
     }
 
     .main {
-        background-color: var(--black);
+        background-color: var(--forge);
     }
     
     h1, h2, h3 {
@@ -40,7 +39,7 @@ st.markdown("""
     .stButton>button {
         font-family: 'Barlow Condensed', sans-serif !important;
         background-color: var(--ember) !important;
-        color: var(--black) !important;
+        color: var(--forge) !important;
         border-radius: 0px !important;
         border: none !important;
         letter-spacing: 0.1em;
@@ -49,7 +48,7 @@ st.markdown("""
     }
     
     .stButton>button:hover {
-        background-color: var(--rust) !important;
+        background-color: var(--brass) !important;
     }
     
     .stTextInput>div>div>input {

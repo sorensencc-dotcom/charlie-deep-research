@@ -172,8 +172,23 @@ def add_arrow_marker(svg: Element):
     polygon.set("fill", PALETTE["strokes"])
 
 
+
+def add_watermark(svg: Element):
+    """Add CIC crest watermark bottom-right (opacity 0.22)."""
+    text = SubElement(svg, "text")
+    text.set("x", str(WIDTH - 40))
+    text.set("y", str(HEIGHT - 30))
+    text.set("text-anchor", "end")
+    text.set("font-family", FONTS["label"])
+    text.set("font-size", "18")
+    text.set("fill", PALETTE["strokes"])
+    text.set("opacity", "0.22")
+    text.text = "CIC"
+
+
 def save_svg(svg: Element, filename: str):
     """Save SVG to file"""
+    add_watermark(svg)
     svg_string = tostring(svg, encoding="unicode")
     output = f'<?xml version="1.0" encoding="UTF-8"?>\n{svg_string}'
     Path(f"diagrams/{filename}").write_text(output)
