@@ -32,13 +32,21 @@ Bare `[VERIFY: …]` tags in S7–S8 now carry V-IDs matching `CIC_SOURCING_DEPE
 - V-8.2 (Toyota lineage precision); V-8.3 (Danish commemoration provenance); V-8.4 (2026 verité contingent)
 
 ### 5. Material upgrade — V-7.4 Cuba stays CONTESTED (not ADMITTED)
-- Beat 7.4 VERIFY upgraded from open PRIMARY_RECORD_GAP prose to **VERIFY-V-7.4 — CONTESTED**: FCSC Claim **CU-3440** / Decision **CU-5843** (Sorensen Family Estate, Matanzas / Pinar del Río) vs FOIA-empty-under-name vs CU-2067 Oppenheim nominee path.
+- Beat 7.4 VERIFY upgraded from open PRIMARY_RECORD_GAP prose to **VERIFY-V-7.4 — CONTESTED**.
+- **RS 2026-09-20 correction:** FCSC dockets **CU-3440** and **CU-5843** are **≠ Sorensen / CES estate** and must **not** be cited as CES estate evidence:
+  - **CU-3440** = Central West Company (Delaware) / Compania Litografica de la Habana — https://www.justice.gov/fcsc/cuba/documents/3001-4500/3440.pdf
+  - **CU-5843** = Beatrice Paulus (heir James P. Paulus) / Cia Azucarera Vertientes-Camaguey — https://www.justice.gov/fcsc/cuba/documents/4501-6000/5843.pdf
+- Prior v1.4 prose that framed CU-3440/CU-5843 as "Charles E. Sorensen Family Estate — agricultural tracts, Matanzas and Pinar del Río" is **withdrawn**.
 - Explicit rule retained: cuba-fcsc / Cuban open-contradictions = FCSC Title V **methodological context only** — does **not** clear V-7.4 to ADMITTED.
-- Still-archival: Bentley Historical Library, Charles E. Sorensen Papers **Box 14** (deeds/ledgers 1948–1962). No parcel-level fate invented.
+- Still-archival: Bentley Historical Library, Charles E. Sorensen Papers **Box 14** (deeds/ledgers 1948–1962) and named NARA holdings. No parcel-level fate invented. **No ADMITTED.**
 
-### 6. Material upgrade — V-8.1a death date CONTESTED
-- Beat 8.1 death VERIFY → **VERIFY-V-8.1a — CONTESTED**: Aug **11**, 1968 (Find A Grave / family) vs Aug **28**, 1968 (Wikipedia); Bethesda, MD place claim provisional.
+
+### 6. Material upgrade — V-8.1a death date (day OPEN; Aug 28 rejected)
+- Beat 8.1 death VERIFY → **VERIFY-V-8.1a**: day remains **OPEN** pending Montgomery County, MD **death certificate**.
+- **RS 2026-09-20 correction:** Wikipedia Aug **28**, 1968 rejected as **tertiary** — do not treat as a competing primary/secondary date for CONTESTED framing.
+- Drafting may prefer **mid-August 1968 Bethesda**. Contemporary lean (not yet certificate-closed): **NYT 14 Aug 1968**, **TIME Milestones 23 Aug 1968**, **DBL 13.8.1968**.
 - Still-archival: Montgomery County / vital **death certificate** — not yet in hand. Not ADMITTED.
+
 
 ### 7. Explicit non-changes (conservative posture)
 - No new beats; no beat reorder; no yacht midpoint.
@@ -57,9 +65,21 @@ Bare `[VERIFY: …]` tags in S7–S8 now carry V-IDs matching `CIC_SOURCING_DEPE
 | V-6.5 | 6.5 | BLOCKED (+ CONTESTED chronology) | **BLOCKED** (richer notes; chronology CONTESTED unchanged) |
 | V-7.1 / V-7.1b | 7.1 | bare VERIFY | ID-stamped; V-7.1b **CONTESTED** (Jeep Day geography) |
 | V-7.2, V-7.3a/b, V-7.5 | 7.2–7.5 | bare VERIFY | ID-stamped |
-| V-7.4 | 7.4 | bare VERIFY (open RQ) | **CONTESTED** (CU-3440/CU-5843 vs FOIA-empty); Box 14 archival |
-| V-8.1a | 8.1 | bare VERIFY | **CONTESTED** (Aug 11 vs Aug 28); death cert archival |
+| V-7.4 | 7.4 | bare VERIFY (open RQ) | **CONTESTED** (CU-3440/CU-5843 **dropped** as CES evidence — ≠ Sorensen); Box 14 / named NARA archival; no ADMITTED |
+| V-8.1a | 8.1 | bare VERIFY | Day **OPEN** (Wikipedia Aug 28 rejected tertiary); mid-Aug 1968 Bethesda drafting lean; death cert archival |
 | V-8.1b/c, V-8.2–8.4 | 8.x | bare VERIFY | ID-stamped |
+
+## RS 2026-09-20 VERIFY correction (landed)
+
+Authoritative drop of misidentified FCSC dockets and tertiary death-date framing:
+
+1. **CU-3440 ≠ Sorensen** — Central West Company (Delaware), Compania Litografica de la Habana; https://www.justice.gov/fcsc/cuba/documents/3001-4500/3440.pdf
+2. **CU-5843 ≠ Sorensen** — Beatrice Paulus (heir James P. Paulus), Cia Azucarera Vertientes-Camaguey; https://www.justice.gov/fcsc/cuba/documents/4501-6000/5843.pdf
+3. **V-7.4** remains **CONTESTED**; do **not** cite CU-3440/CU-5843 as CES estate evidence. Need Bentley **Box 14** / named NARA. **No ADMITTED.**
+4. **V-8.1a:** reject Wikipedia Aug 28 as tertiary. Day **OPEN** pending Montgomery Co. MD death certificate. Drafting may prefer mid-August 1968 Bethesda. Contemporary lean: NYT 14 Aug 1968, TIME Milestones 23 Aug 1968, DBL 13.8.1968.
+5. **V-5.3 / V-6.5** unchanged **BLOCKED**.
+
+Live treatment prose attributing CU-3440/CU-5843 to the Sorensen Family Estate was corrected in `TREATMENT_DRAFT_v1.4.md` (status line, beat 7.4) and this changelog (§§5–6 + table). TRM sync reports left untouched.
 
 ## Still-archival (do not invent)
 - Bentley Historical Library — Sorensen Papers **Box 14**
@@ -73,4 +93,4 @@ Bare `[VERIFY: …]` tags in S7–S8 now carry V-IDs matching `CIC_SOURCING_DEPE
 - `CHANGELOG_v1.4.md` — this file
 
 ## Status
-v1.4 ready for review. Not committed to git pending sign-off — working-tree draft only, consistent with v1.2/v1.3 status.
+v1.4 VERIFY apparatus includes RS 2026-09-20 correction (CU-3440/CU-5843 drop; Aug 28 tertiary reject). Committed with fix(verify) landing.
