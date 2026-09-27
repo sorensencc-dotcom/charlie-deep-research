@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3840" height="2160" viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Barlow+Condensed:wght@400;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap');
+
+        .row-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            fill: #E8E0D4;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .diagram-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            fill: #E8E0D4;
+        }
+
+        .diagram-box {
+            stroke: #B8922A;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .ember-node {
+            fill: #C4501A;
+            r: 6;
+        }
+        </style><pattern id="brass_grid" width="40" height="40" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="40" y2="0" stroke="#2C2420" stroke-width="0.5" /><line x1="0" y1="0" x2="0" y2="40" stroke="#2C2420" stroke-width="0.5" /></pattern></defs><rect width="3840" height="2160" fill="#1A1410" /><rect width="3840" height="2160" fill="url(#brass_grid)" /><text class="row-label" x="1920" y="140" text-anchor="middle">GLOBAL</text><rect class="diagram-box" x="690" y="200" width="1200" height="800" /><image xlink:href="diagrams/multi_region.png" x="690" y="200" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="1290" y="1040" text-anchor="middle">Multi-Region Architecture</text><circle class="ember-node" cx="690" cy="200" /><circle class="ember-node" cx="1890" cy="200" /><circle class="ember-node" cx="690" cy="1000" /><circle class="ember-node" cx="1890" cy="1000" /><rect class="diagram-box" x="1950" y="200" width="1200" height="800" /><image xlink:href="diagrams/region_registry.png" x="1950" y="200" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="2550" y="1040" text-anchor="middle">Region Registry &amp; Proxy Logic</text><circle class="ember-node" cx="1950" cy="200" /><circle class="ember-node" cx="3150" cy="200" /><circle class="ember-node" cx="1950" cy="1000" /><circle class="ember-node" cx="3150" cy="1000" /><text class="row-label" x="1920" y="1100" text-anchor="middle">PIPELINE</text><rect class="diagram-box" x="60" y="1160" width="1200" height="800" /><image xlink:href="diagrams/harvester.png" x="60" y="1160" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="660" y="2000" text-anchor="middle">Harvester Pipeline</text><circle class="ember-node" cx="60" cy="1160" /><circle class="ember-node" cx="1260" cy="1160" /><circle class="ember-node" cx="60" cy="1960" /><circle class="ember-node" cx="1260" cy="1960" /><rect class="diagram-box" x="1320" y="1160" width="1200" height="800" /><image xlink:href="diagrams/orchestrator.png" x="1320" y="1160" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="1920" y="2000" text-anchor="middle">Orchestrator Flow</text><circle class="ember-node" cx="1320" cy="1160" /><circle class="ember-node" cx="2520" cy="1160" /><circle class="ember-node" cx="1320" cy="1960" /><circle class="ember-node" cx="2520" cy="1960" /><rect class="diagram-box" x="2580" y="1160" width="1200" height="800" /><image xlink:href="diagrams/queue_dlq.png" x="2580" y="1160" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="3180" y="2000" text-anchor="middle">Queue &amp; DLQ Management</text><circle class="ember-node" cx="2580" cy="1160" /><circle class="ember-node" cx="3780" cy="1160" /><circle class="ember-node" cx="2580" cy="1960" /><circle class="ember-node" cx="3780" cy="1960" /><text class="row-label" x="1920" y="2060" text-anchor="middle">SYSTEM-WIDE</text><rect class="diagram-box" x="60" y="2120" width="1200" height="800" /><image xlink:href="diagrams/image_search.png" x="60" y="2120" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="660" y="2960" text-anchor="middle">Reverse Image Search Workflow</text><circle class="ember-node" cx="60" cy="2120" /><circle class="ember-node" cx="1260" cy="2120" /><circle class="ember-node" cx="60" cy="2920" /><circle class="ember-node" cx="1260" cy="2920" /><rect class="diagram-box" x="1320" y="2120" width="1200" height="800" /><image xlink:href="diagrams/control_plane.png" x="1320" y="2120" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="1920" y="2960" text-anchor="middle">Control Plane Internal Routing</text><circle class="ember-node" cx="1320" cy="2120" /><circle class="ember-node" cx="2520" cy="2120" /><circle class="ember-node" cx="1320" cy="2920" /><circle class="ember-node" cx="2520" cy="2920" /><rect class="diagram-box" x="2580" y="2120" width="1200" height="800" /><image xlink:href="diagrams/telemetry.png" x="2580" y="2120" width="1200" height="800" preserveAspectRatio="xMidYMid meet" /><text class="diagram-title" x="3180" y="2960" text-anchor="middle">Telemetry &amp; Observability</text><circle class="ember-node" cx="2580" cy="2120" /><circle class="ember-node" cx="3780" cy="2120" /><circle class="ember-node" cx="2580" cy="2920" /><circle class="ember-node" cx="3780" cy="2920" /><text x="3760" y="2120" font-family="Barlow Condensed" font-size="24" fill="#9A9088" opacity="0.22" text-anchor="end">CIC</text></svg>
