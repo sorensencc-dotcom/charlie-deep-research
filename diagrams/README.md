@@ -11,18 +11,20 @@ This directory contains the eight canonical CIC Industrial‑style diagrams:
 7. Control Plane Internal Routing
 8. Telemetry & Observability
 
-Each diagram follows the **CIC Industrial Design System** (source of truth: [`../cic_design_system.md`](../cic_design_system.md); author checklist: [`../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md`](../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md)):
+Wiki-facing SVGs / HTML embeds follow the **CIC Industrial Design System** in **readable parchment** mode (source of truth: [`../cic_design_system.md`](../cic_design_system.md); author checklist: [`../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md`](../docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md)):
 
-- Forge black background `#1A1410`
-- Brass grid `#2C2420` and strokes `#B8922A`
-- Ember nodes `#C4501A`
+- Parchment board `#F5F0E6` (cream field — not forge black)
+- Off-white node fills (light / cream); forge black `#1A1410` for **ink, borders, and labels only**
+- Brass strokes `#B8922A` and ember accents `#C4501A` (highlights / feedback — not default fills)
 - Playfair / Barlow / Baskerville typography
 - CIC crest watermark bottom-right at opacity 0.22
 - No drop shadows, gradients, or rounded corners
 
+Industrial forge-black canvases (`#1A1410`) remain valid for **non-wiki** master sheets and dark preview UIs only — do not copy those fills onto curated wiki diagram skins.
+
 ## Master Sheets
 
-Two master sheet variants are generated from these diagrams:
+Two master sheet variants are generated from these diagrams (intentionally forge-black canvases; not wiki embeds):
 
 ### A — Raster‑Embedded
 
