@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Condensed:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
-      .title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; fill: #E8E0D4; }
-      .label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; fill: #9A9088; letter-spacing: 0.05em; }
-      .box { stroke: #B8922A; stroke-width: 2; fill: none; }
-      .node { fill: #C4501A; }
-      .connector { stroke: #B8922A; stroke-width: 1.5; fill: none; }
-    </style>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#B8922A"/>
-    </marker>
-  </defs>
-  <rect width="1200" height="800" fill="#1A1410"/>
-  <text class="title" x="40" y="50">Control Plane Internal Routing</text>
-  <rect class="box" x="450" y="150" width="140" height="100"/>
-  <text class="label" x="520" y="195" text-anchor="middle">Control</text>
-  <text class="label" x="520" y="215" text-anchor="middle">Plane</text>
-  <rect class="box" x="150" y="200" width="100" height="80"/>
-  <text class="label" x="200" y="245" text-anchor="middle">Policies</text>
-  <line class="connector" x1="250" y1="240" x2="450" y2="240" marker-end="url(#arrowhead)"/>
-  <rect class="box" x="150" y="350" width="100" height="80"/>
-  <text class="label" x="200" y="395" text-anchor="middle">Rules</text>
-  <line class="connector" x1="250" y1="390" x2="450" y2="390" marker-end="url(#arrowhead)"/>
-  <circle class="node" cx="900" cy="200" r="25"/>
-  <text class="label" x="900" y="205" text-anchor="middle">DP1</text>
-  <line class="connector" x1="590" y1="200" x2="875" y2="200" marker-end="url(#arrowhead)"/>
-  <circle class="node" cx="900" cy="350" r="25"/>
-  <text class="label" x="900" y="355" text-anchor="middle">DP2</text>
-  <line class="connector" x1="590" y1="350" x2="875" y2="350" marker-end="url(#arrowhead)"/>
-  <rect class="box" x="300" y="500" width="100" height="80"/>
-  <text class="label" x="350" y="545" text-anchor="middle">Sync Status</text>
-</svg>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><defs><style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Barlow+Condensed:wght@400;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap');
+
+    .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        fill: #1A1410;
+    }
+
+    .label {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        fill: #5C5349;
+        letter-spacing: 0.05em;
+    }
+
+    .box {
+        stroke: #1A1410;
+        stroke-width: 2;
+        fill: #FAF6F0;
+    }
+
+    .node {
+        fill: #C4501A;
+    }
+
+    .connector {
+        stroke: #1A1410;
+        stroke-width: 1.5;
+        fill: none;
+    }
+
+    .grid-line {
+        stroke: #2C2420;
+        stroke-width: 0.5;
+        opacity: 0.18;
+    }
+    </style><marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#1A1410" /></marker></defs><rect width="1200" height="800" fill="#F5F0E6" /><line class="grid-line" x1="0" y1="0" x2="0" y2="800" /><line class="grid-line" x1="50" y1="0" x2="50" y2="800" /><line class="grid-line" x1="100" y1="0" x2="100" y2="800" /><line class="grid-line" x1="150" y1="0" x2="150" y2="800" /><line class="grid-line" x1="200" y1="0" x2="200" y2="800" /><line class="grid-line" x1="250" y1="0" x2="250" y2="800" /><line class="grid-line" x1="300" y1="0" x2="300" y2="800" /><line class="grid-line" x1="350" y1="0" x2="350" y2="800" /><line class="grid-line" x1="400" y1="0" x2="400" y2="800" /><line class="grid-line" x1="450" y1="0" x2="450" y2="800" /><line class="grid-line" x1="500" y1="0" x2="500" y2="800" /><line class="grid-line" x1="550" y1="0" x2="550" y2="800" /><line class="grid-line" x1="600" y1="0" x2="600" y2="800" /><line class="grid-line" x1="650" y1="0" x2="650" y2="800" /><line class="grid-line" x1="700" y1="0" x2="700" y2="800" /><line class="grid-line" x1="750" y1="0" x2="750" y2="800" /><line class="grid-line" x1="800" y1="0" x2="800" y2="800" /><line class="grid-line" x1="850" y1="0" x2="850" y2="800" /><line class="grid-line" x1="900" y1="0" x2="900" y2="800" /><line class="grid-line" x1="950" y1="0" x2="950" y2="800" /><line class="grid-line" x1="1000" y1="0" x2="1000" y2="800" /><line class="grid-line" x1="1050" y1="0" x2="1050" y2="800" /><line class="grid-line" x1="1100" y1="0" x2="1100" y2="800" /><line class="grid-line" x1="1150" y1="0" x2="1150" y2="800" /><line class="grid-line" x1="0" y1="0" x2="1200" y2="0" /><line class="grid-line" x1="0" y1="50" x2="1200" y2="50" /><line class="grid-line" x1="0" y1="100" x2="1200" y2="100" /><line class="grid-line" x1="0" y1="150" x2="1200" y2="150" /><line class="grid-line" x1="0" y1="200" x2="1200" y2="200" /><line class="grid-line" x1="0" y1="250" x2="1200" y2="250" /><line class="grid-line" x1="0" y1="300" x2="1200" y2="300" /><line class="grid-line" x1="0" y1="350" x2="1200" y2="350" /><line class="grid-line" x1="0" y1="400" x2="1200" y2="400" /><line class="grid-line" x1="0" y1="450" x2="1200" y2="450" /><line class="grid-line" x1="0" y1="500" x2="1200" y2="500" /><line class="grid-line" x1="0" y1="550" x2="1200" y2="550" /><line class="grid-line" x1="0" y1="600" x2="1200" y2="600" /><line class="grid-line" x1="0" y1="650" x2="1200" y2="650" /><line class="grid-line" x1="0" y1="700" x2="1200" y2="700" /><line class="grid-line" x1="0" y1="750" x2="1200" y2="750" /><text class="title" x="40" y="50">Control Plane Internal Routing</text><rect class="box" x="450" y="150" width="140" height="100" /><text class="label" x="520" y="205" text-anchor="middle">Control
+Plane</text><rect class="box" x="150" y="200" width="100" height="80" /><text class="label" x="200" y="245" text-anchor="middle">Policies</text><line class="connector" x1="250" y1="240" x2="450" y2="240" marker-end="url(#arrowhead)" /><rect class="box" x="150" y="350" width="100" height="80" /><text class="label" x="200" y="395" text-anchor="middle">Rules</text><line class="connector" x1="250" y1="390" x2="450" y2="390" marker-end="url(#arrowhead)" /><circle class="node" cx="900" cy="200" r="25" /><text class="label" x="900" y="205" text-anchor="middle">DP1</text><line class="connector" x1="590" y1="200" x2="875" y2="200" marker-end="url(#arrowhead)" /><circle class="node" cx="900" cy="350" r="25" /><text class="label" x="900" y="355" text-anchor="middle">DP2</text><line class="connector" x1="590" y1="350" x2="875" y2="350" marker-end="url(#arrowhead)" /><rect class="box" x="300" y="500" width="100" height="80" /><text class="label" x="350" y="545" text-anchor="middle">Sync Status</text><text x="1160" y="770" text-anchor="end" font-family="Barlow Condensed" font-size="18" fill="#B8922A" opacity="0.22">CIC</text></svg>

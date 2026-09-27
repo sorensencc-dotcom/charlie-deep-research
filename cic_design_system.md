@@ -46,7 +46,7 @@ For **curated CIC wiki diagrams** (GitHub wiki HTML/SVG/PNG and Mermaid `classDe
 
 | Name | Hex | Use on wiki diagrams |
 | --- | --- | --- |
-| PAPER / PARCHMENT (board + default node fill) | `#F2ECE2` | Diagram board/background and default node fills |
+| PAPER / PARCHMENT (board + default node fill) | `#F5F0E6` | Diagram board/background and default node fills |
 | PAPER_ALT (optional node fill) | `#FAF6F0` | Alternate light/off-white node fill |
 | INK (forge black as ink) | `#1A1410` | Text, borders, labels, chrome only — NEVER node/board fill on wiki diagrams |
 | INK_SECONDARY | `#2C2420` | Secondary ink / muted chrome — NEVER default node fill on wiki diagrams |
@@ -65,17 +65,3 @@ For **curated CIC wiki diagrams** (GitHub wiki HTML/SVG/PNG and Mermaid `classDe
 - Coded contrast twin (pattern only): `C:\dev\sigil\docs\wiki\architecture.html` (`--color-paper`, `--color-ink`, `--color-accent`).
 
 See also: `docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md` readability checklist and Toolforge `docs/meta/governance/wiki-style-and-structure.md` §8 / W13.
-
-## Readable wiki diagrams (TRM / GitHub wiki)
-
-Forge-black node fills are illegible on GitHub wiki Mermaid and PNG embeds. For wiki Quick Architecture and sibling diagram triplets, use parchment mode:
-
-- **PAPER (parchment field):** #F5F0E6
-- **NODE_FILL (off-white):** #FAF6F0
-- **INK (forge, text/borders only):** #1A1410
-- **MUTED_INK (labels):** #5C5349
-- **STROKES (brass accents):** #B8922A
-- **EMBER (highlight stages / feedback arrows only):** #C4501A
-
-Do **not** use BACKGROUND/GRID as node fills on wiki diagrams. Master sheets / treatment canvases may still use forge BACKGROUND as page chrome.
-

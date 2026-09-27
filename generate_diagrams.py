@@ -9,12 +9,17 @@ from pathlib import Path
 
 # Design System
 PALETTE = {
-    "background": "#1A1410",
-    "grid": "#2C2420",
-    "strokes": "#B8922A",
-    "ember": "#C4501A",
-    "text_primary": "#E8E0D4",
-    "text_secondary": "#9A9088",
+    # Wiki-style v1.2 / CIC parchment default (readable)
+    "background": "#F5F0E6",  # parchment field
+    "paper": "#F5F0E6",
+    "node_fill": "#FAF6F0",   # off-white nodes
+    "grid": "#2C2420",        # subtle grid ink (drawn faint)
+    "strokes": "#1A1410",     # forge black borders/connectors
+    "brass": "#B8922A",
+    "ember": "#C4501A",       # accent nodes / feedback only
+    "text_primary": "#1A1410",
+    "text_secondary": "#5C5349",
+    "ink": "#1A1410",
 }
 
 FONTS = {
@@ -59,7 +64,7 @@ def create_base_svg(title: str) -> Element:
     .box {{
         stroke: {PALETTE["strokes"]};
         stroke-width: 2;
-        fill: none;
+        fill: {PALETTE["node_fill"]};
     }}
 
     .node {{
@@ -75,6 +80,7 @@ def create_base_svg(title: str) -> Element:
     .grid-line {{
         stroke: {PALETTE["grid"]};
         stroke-width: 0.5;
+        opacity: 0.18;
     }}
     """
 
@@ -181,7 +187,7 @@ def add_watermark(svg: Element):
     text.set("text-anchor", "end")
     text.set("font-family", FONTS["label"])
     text.set("font-size", "18")
-    text.set("fill", PALETTE["strokes"])
+    text.set("fill", PALETTE.get("brass", PALETTE["ember"]))
     text.set("opacity", "0.22")
     text.text = "CIC"
 
@@ -433,7 +439,7 @@ def generate_all():
         print(f"Generating {name}...")
         generator()
 
-    print(f"\n✓ Generated {len(diagrams)} diagram templates in diagrams/")
+    print(f"\nGenerated {len(diagrams)} diagram templates in diagrams/")
 
 
 if __name__ == "__main__":
