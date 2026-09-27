@@ -3,6 +3,26 @@
 Operator‑grade assets, generators, and specifications for producing CIC's
 Industrial‑style system diagrams and master sheets.
 
+
+**Status:** Active — CIC Industrial design system and master-sheet generators  
+**Audience:** CIC operators, copywriters, and agents that publish Cast Iron Charlie diagrams, master sheets, treatments, and wiki/docs artifacts.
+
+## Quick start
+
+```bash
+git clone https://github.com/sorensencc-dotcom/charlie-deep-research.git
+cd charlie-deep-research
+pip install -r requirements.txt
+python generate_master_sheet.py A
+```
+
+## Docs & governance
+
+- Design system SoT: [`cic_design_system.md`](cic_design_system.md)
+- Enforcement checklist: [`docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md`](docs/CIC_DESIGN_SYSTEM_ENFORCEMENT.md)
+- Governance inheritance: [`treatment/CIC_GOVERNANCE_INHERITANCE_MAP_V1.1.md`](treatment/CIC_GOVERNANCE_INHERITANCE_MAP_V1.1.md)
+- Nested Toolforge governance mirror: [`toolforge/GOVERNANCE.md`](toolforge/GOVERNANCE.md)
+
 ## CIC Industrial Design System
 
 **Source of truth:** [`cic_design_system.md`](cic_design_system.md)
